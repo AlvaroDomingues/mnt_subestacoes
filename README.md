@@ -1,6 +1,6 @@
-# Sistema auxiliar para manutenções de subestações de médio porte
+# Sistema auxiliar para manutenções de subestações de média tensão
 
-Este sistema está sendo desenvolvido com a intenção de auxiliar os profissionais que atual na manutenção de subestações de energia de medio porte, registrando as informações dos equipamentos que precisam de manuteção com mais agilidade, gerando relatórios e servindo de fonte para auditoria das manutenções realizadas.
+Este sistema está sendo desenvolvido com a intenção de auxiliar os profissionais que atuam na manutenção de subestações de energia de media tensão, registrando as informações dos equipamentos que precisam de manuteção com mais agilidade, gerando relatórios e servindo de fonte para auditoria das manutenções realizadas.
 
 ## 🚀 Começando
 
@@ -39,6 +39,11 @@ Após baixar o arquivo ZIP, extraia o projeto e abra a pasta no seu editor de c�
 * **Yan Silva** - *Desenvolvedor* - [GITHUB](https://github.com/YanLcs)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/AlvaroDomingues/mnt_subestacoes/colaboradores) que participaram deste projeto.
+
+## 📗 Orientador
+
+* **Rand Melville** - [GITHUB](https://github.com/RandMelville)
+
 
 ## 📄 Licença
 

@@ -34,8 +34,8 @@ Após baixar o arquivo ZIP, extraia o projeto e abra a pasta no seu editor de c�
 * **Alvaro Domingues** - *Desenvolvedor* - [GITHUB](https://github.com/AlvaroDomingues)
 * **Amanda Silva** - *Desenvolvedora* - [GITHUB](https://github.com/amandasilvart)
 * **Crisciany Souza** - *Desenvolvedora* - [GITHUB](https://github.com/Any97Cris)
-* **Luiz Paulo** - *Desenvolvedor* - [GITHUB](https://github.com/Paulo-P-33)
-* **Wilza Gomes** - *Desenvolvedora* - [GITHUB](https://github.com/WilzaMartins)
+* **Luiz Lira** - *Desenvolvedor* - [GITHUB](https://github.com/Paulo-P-33)
+* **Wilza Martins** - *Desenvolvedora* - [GITHUB](https://github.com/WilzaMartins)
 * **Yan Silva** - *Desenvolvedor* - [GITHUB](https://github.com/YanLcs)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/AlvaroDomingues/mnt_subestacoes/colaboradores) que participaram deste projeto.

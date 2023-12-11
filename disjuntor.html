@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disjuntor</title>
+</head>
+<body>
+    <h1>ENSAIO DO DISJUNTOR</h1>
+
+    <!-- identificação do equipamento-->
+
+    <table border="1">
+
+        <!-- Linha 1 -->
+        <tr>
+            <td colspan="4"><strong>DADOS DO DISJUNTOR</strong></td>
+        </tr>
+        <!-- Linha 2-->
+        <tr>
+            <td>Fabricante:</td>
+            <td><input type="text" name="fabricante" id="fabricante"></td>
+            <td>Acionamento:</td>
+            <td><input type="text" name="acionamento" id="acionamento"></td>
+        </tr>
+        <!-- Linha 3-->
+        <tr>
+            <td>Nº de série/ano:</td>
+            <td><input type="text" name="n-serie" id="n-serie"></td>
+            <td>Tensão Nominal(KV):</td>
+            <td><input type="text" name="tensao-nominal" id="tensao-nominal"></td>
+        </tr>
+        <!-- Linha 4-->
+        <tr>
+            <td>Tipo:</td>
+            <td><input type="text" name="tipo" id="tipo"></td>
+            <td>Corrente Nominal (A):</td>
+            <td><input type="text" name="corrente-nominal" id="corrente-nominal"></td>
+        </tr>
+        <!-- Linha 5 -->
+        <tr>
+            <td>Meio de Extinção:</td>
+            <td><input type="text" name="meio-extincao" id="meio-extincao"></td>
+            <td>Capacidade de Interrupção (MVA):</td>   
+            <td><input type="text" name="cap-interrupcao" id="cap-interrupcao"></td>     
+        </tr>
+        <!-- Linha 6-->
+        <tr>
+            <td>Tag do Equipamento:</td>
+            <td colspan="3"><input type="text" name="tag-equipamento" id="tag-equipamento"></td>
+        </tr>
+    </table><br>
+
+    <!-- Check list-->
+
+    <table border="1">
+        <!--Linha 1-->
+        <tr>
+            <td colspan="2"><strong>CHECK</strong></td>
+        </tr>
+        <!-- Linha 2-->
+        <tr>
+            <td>DESCRIÇÃO</td>
+            <td>STATUS</td>
+        </tr>
+        <!-- Linha 3-->
+        <tr>
+            <td>Inspeção visual</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>
+                </select>
+            </td>
+        </tr>
+         <!-- Linha 4-->
+         <tr>
+            <td>Limpeza, ajuste e lubrificação dos mecanismos de acionamento</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select>               
+            </td>
+        </tr>
+        <!-- Linha 5 -->
+        <tr>
+            <td>Verificar rachaduras nos isoladores e buchas</td>
+            <td>
+                <select name="" id="">
+                    <option value="nao-ha">NÃO HÁ</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 6 -->
+        <tr>
+            <td>Verificar ruídos e vibrações anormais</td>
+            <td>
+                <select name="" id="">
+                    <option value="normal">NORMAL</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 7 -->
+        <tr>
+            <td>Verificar a sinalização e a posião da alavanca de operação</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 8 -->
+        <tr>
+            <td>Verificar o funcionamento e os indicadores da sinalização</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 9-->
+        <tr>
+            <td>Verificar o intertravamento</td>
+            <td><select name="" id="">
+                <option value="ok">OK</option>
+                <option value="nao-ha">NÃO HÁ</option>
+                <option value="observacao">Observação</option>                    
+            </select> </td>
+        </tr>
+        <!-- linha 10 -->
+        <tr>
+            <td>Verificação e reaperto das conexões</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 11-->
+        <tr>
+            <td>Verificação do mecanismo de acionamento</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>
+        <!-- Linha 12 -->
+        <tr>
+            <td>Testes operacionais</td>
+            <td>
+                <select name="" id="">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>                    
+                </select> 
+            </td>
+        </tr>    
+    </table><br>
+
+    <!-- Resistencia ôhmica de contato -->
+    <table border="1">
+        <!-- Linha 1-->
+        <tr>
+            <td colspan="4"><strong>RESISTÊNCIA ÔHMICA DE CONTATO</strong></td>
+        </tr>
+        <!-- Linha 2-->
+        <tr>
+            <td>Polo</td>
+            <td colspan="3">Valor</td>
+        </tr>
+        <!-- Linha 3-->
+        <tr>
+            <td>R</td>
+            <td colspan="3"><input type="text" name="polo-r" id="polo-r"></td>
+        </tr>
+        <!-- Linha 4 -->
+        <tr>
+            <td>S</td>
+            <td colspan="3"><input type="text" name="polo-s" id="polo-s"></td>
+        </tr>
+        <!-- Linha 5 -->
+        <tr>
+            <td>T</td>
+            <td colspan="3"><input type="text" name="polo-t" id="polo-t"></td>
+        </tr>
+        <!-- Linha 6-->
+        <tr>
+            <td>Equipamento utilizado:</td>
+            <td>
+                <select name="equipamento-uti" id="equipamento-uti" required>
+                    <option value="microhmimetro-digital">Microhmímetro Digital</option>
+                    <option value="megometro-digital">Megômetro Digital</option>
+                    <option value="informar-equipamento">Informar Equipamento</option>
+                </select>
+            </td>
+            <td>Marca/modelo:</td>
+            <td>
+                <select name="marca-modelo" id="marca-modelo">
+                    <option value="michom-100">MICROHM 100</option>
+                    <option value="dmg-01">DMG 10 Ki</option>
+                    <option value="informar-marca-modelo">Informar marca/modelo</option>   
+                </select>
+            </td>             
+        </tr>
+    </table><br>
+
+    <!-- Resistência ôhmica de isolação-->
+    <table border="1">
+        <!-- Linha 1-->
+        <tr>
+            <td colspan="6"><strong>RESISTÊNCIA ÔHMICA DE ISOLAÇÃO</strong></td>
+        </tr>
+        <!-- Linha 2-->
+        <tr>
+           <td colspan="2">CONTATOS FECHADOS</td> 
+           <td colspan="2">CONTATOS ABERTOS</td>
+           <td colspan="2">CONTATOS ABERTOS</td>
+        </tr>
+        <!-- Linha 3-->
+        <tr>
+            <td>Polo</td>
+            <td>Valor</td>
+            <td>Polo</td>
+            <td>Valor</td>
+            <td>Polos</td>
+            <td>Valor</td>
+        </tr>
+        <!-- Linha 4-->
+        <tr>
+            <td>R x TERRA</td>
+            <td><input type="text" name="polo-r-terra" id="polo-r-terra"></td>
+            <td>R</td>
+            <td><input type="text" name="polo-r" id="polo-r"></td>
+            <td>R x S</td>
+            <td><input type="text" name="polo-r-s" id="polo-r-s"></td>
+        </tr>
+        <!-- Linha 5-->
+        <tr>
+            <td>S x TERRA</td>
+            <td><input type="text" name="polo-s-terra" id="polo-s-terra"></td>
+            <td>S</td>
+            <td><input type="text" name="polo-s" id="polo-s"></td>
+            <td>S x T</td>
+            <td><input type="text" name="polo-s-t" id="polo-s-t"></td>
+        </tr>
+        <!-- Linha 6-->
+        <tr>
+            <td>T x TERRA</td>
+            <td><input type="text" name="polo-t-terra" id="polo-t-terra"></td>
+            <td>T</td>
+            <td><input type="text" name="polo-s" id="polo-s"></td>
+            <td>T x R</td>
+            <td><input type="text" name="polo-t-r" id="polo-t-r"></td>  
+        </tr>
+        <!-- Linha 7-->
+        <tr>
+            <td>Tensão de ensaio (KV):</td>
+            <td colspan="5"><input type="text" name="tensao-ensaio" id="tensao-ensaio"></td>
+        </tr>
+        <!-- Linha 8-->
+        <tr>
+            <td colspan="2">Equipamento utilizado:</td>
+            <td>
+                <select name="equipamento-uti" id="equipamento-uti" required>
+                    <option value="microhmimetro-digital">Microhmímetro Digital</option>
+                    <option value="megometro-digital">Megômetro Digital</option>
+                    <option value="informar-equipamento">Informar Equipamento</option>
+                </select>
+            </td>
+            <td colspan="2">Marca/modelo:</td>
+            <td>
+                <select name="marca-modelo" id="marca-modelo">
+                    <option value="michom-100">MICROHM 100</option>
+                    <option value="dmg-01">DMG 10 Ki</option>
+                    <option value="informar-marca-modelo">Informar marca/modelo</option>   
+                </select>
+            </td>       
+        </tr>
+    </table><br>
+
+    <!-- Simultaneidade -->
+    <table border="1">
+        <!-- Linha 1-->
+        <tr>
+            <td colspan="4"><strong>SIMULTANEIDADE</strong></td>
+        </tr>
+        <!-- Linha 2-->
+        <tr>
+            <td>POLO</td>
+            <td>MEDIÇÃO 1</td>
+            <td>MEDIÇÃO 2</td>
+            <td>MEDIÇÃO 3</td>
+        </tr>
+        <!-- Linha 3-->
+        <tr>
+            <td>R</td>
+            <td><input type="text" name="medicao1" id="medicao1-r"></td>
+            <td><input type="text" name="medicao2" id="medicao2-r"></td>
+            <td><input type="text" name="medicao3" id="medicao3-r"></td>
+        </tr>
+        <!-- Linha 4 -->
+        <tr>
+            <td>S</td>
+            <td><input type="text" name="medicao1" id="medicao1-s"></td>
+            <td><input type="text" name="medicao2" id="medicao2-s"></td>
+            <td><input type="text" name="medicao3" id="medicao3-s"></td>
+        </tr>
+        <!-- Linha 5 -->
+        <tr>
+            <td>T</td>
+            <td><input type="text" name="medicao1" id="medicao1-t"></td>
+            <td><input type="text" name="medicao2" id="medicao2-t"></td>
+            <td><input type="text" name="medicao3" id="medicao3-t"></td>
+        </tr>
+        <!-- Linha 6 -->
+        <tr>
+            <td>Equipamento utilizado:</td>
+            <td>
+                <select name="equipamento-uti" id="equipamento-uti" required>
+                    <option value="microhmimetro-digital">Microhmímetro Digital</option>
+                    <option value="megometro-digital">Megômetro Digital</option>
+                    <option value="informar-equipamento">Informar Equipamento</option>
+                </select>
+            </td>
+            <td>Marca/modelo:</td>
+            <td>
+                <select name="marca-modelo" id="marca-modelo">
+                    <option value="michom-100">MICROHM 100</option>
+                    <option value="dmg-01">DMG 10 Ki</option>
+                    <option value="informar-marca-modelo">Informar marca/modelo</option>   
+                </select>
+            </td>       
+        </tr>
+    </table><br>
+    
+    <!-- Campo observações-->
+    <form action="">
+        <label for="observacoes"><h3>Observações</h3></label>
+        <textarea name="observacoes" id="observacoes" cols="120" rows="10"></textarea>
+        <br><br><input type="submit" value="Finalizar Manutenção do Equipamento">
+    </form>
+
+</body>
+</html>

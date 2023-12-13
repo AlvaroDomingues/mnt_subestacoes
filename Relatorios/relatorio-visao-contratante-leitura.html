@@ -1,118 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório Visão Contratante</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório Visão Contratante</title>
 </head>
+
 <body>
-    <form>
-        <h3>Dados da Empresa</h3>
+  <form>
+    <h3>Dados da Empresa</h3>
 
-        <label>Nome da Empresa</label>
-        <br>
-        <input type="text" name="nome_empresa" id="nome_empresa" readonly>
+    <label>Nome da Empresa</label>
+    <br>
+    <input type="text" name="nome_empresa" id="nome_empresa" readonly>
 
-        <br>
+    <br>
 
-        <label>Nome do Responsável</label>
-        <br>
-        <input type="text" name="nome_responsavel" name="nome_responsavel" readonly>
+    <label>Nome do Responsável</label>
+    <br>
+    <input type="text" name="nome_responsavel" name="nome_responsavel" readonly>
 
-        <br>
+    <br>
 
-        <label>Título Relatório</label>
-        <br>
-        <input type="text" name="titulo" id="titulo" readonly>
+    <label>Título Relatório</label>
+    <br>
+    <input type="text" name="titulo" id="titulo" readonly>
 
-        <br>
+    <br>
 
-        <label>Local</label>
-        <br>
-        <input type="text" name="local" id="local" readonly>
+    <label>Local</label>
+    <br>
+    <input type="text" name="local" id="local" readonly>
 
-        <br>
+    <br>
 
-        <label>Data Execução</label>
-        <br>
-        <input type="date" name="data_execucao" id="data_execucao" value="08/12/2023" readonly>
+    <label>Data Execução</label>
+    <br>
+    <input type="date" name="data_execucao" id="data_execucao" value="08/12/2023" readonly>
 
-        <br>
+    <br>
 
-        <label>Data de Envio</label>
-        <br>
-        <input type="date" name="data_envio" id="data_envio" value="08/12/2023" readonly>
+    <label>Data de Envio</label>
+    <br>
+    <input type="date" name="data_envio" id="data_envio" value="08/12/2023" readonly>
 
-        <br>
+    <br>
 
-        <h3>Dados do Responsável Técnico</h3>
-        
-        <label>Número CREA</label>
-        <br>
-        <input type="text" name="numero_crea" id="numero_crea" readonly>
+    <h3>Dados do Responsável Técnico</h3>
 
-        <br>
+    <label>Número CREA</label>
+    <br>
+    <input type="text" name="numero_crea" id="numero_crea" readonly>
 
-        <label>Cargo</label>
-        <br>
-        <select name="cargo" id="cargo">
-            <!-- <option value="0">Selecione o cargo</option> -->
-            <option value="1">Técnico</option>
-            <!-- <option value="2">Engenheiro</option> -->
-        </select>
+    <br>
 
-        <br>
+    <label>Cargo</label>
+    <br>
+    <select name="cargo" id="cargo">
+      <!-- <option value="0">Selecione o cargo</option> -->
+      <option value="1">Técnico</option>
+      <!-- <option value="2">Engenheiro</option> -->
+    </select>
 
-        <label>ART(Anotação de Responsabilidade Tecnica)</label>
-        <br>
-        <input type="text" name="art" id="art" value="9999999999999" readonly>
+    <br>
 
-        <br>
+    <label>ART(Anotação de Responsabilidade Tecnica)</label>
+    <br>
+    <input type="text" name="art" id="art" value="9999999999999" readonly>
 
-        <label>Descrição</label>
-        <br>
-        <span>digite os equipamente de ensaio utilizados e descreva as atividades de manutenção</span>
-        <br>
-        <textarea name="descricao" id="descricao" cols="30" rows="10" readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.</textarea>
+    <br>
 
-        <br>
+    <label>Descrição</label>
+    <br>
+    <span>digite os equipamente de ensaio utilizados e descreva as atividades de manutenção</span>
+    <br>
+    <textarea name="descricao" id="descricao" cols="30" rows="10"
+      readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.</textarea>
 
-        <label>Tabela Equipamentos</label>
-        <table>
-            <tr>
-              <th>Equipamento 1</th>
-              <th>Equipamento 2</th>
-              <th>Equipamento 3</th>
-            </tr>
-            <tr>
-              <td>##################</td>
-              <td>##################</td>
-              <td>##################</td>
-            </tr>
-            <tr>
-              <td>##################</td>
-              <td>##################</td>
-              <td>##################</td>
-            </tr>
-          </table>
+    <br>
 
-        <br>
+    <label>Tabela Equipamentos</label>
+    <table>
+      <tr>
+        <th>Equipamento 1</th>
+        <th>Equipamento 2</th>
+        <th>Equipamento 3</th>
+      </tr>
+      <tr>
+        <td>##################</td>
+        <td>##################</td>
+        <td>##################</td>
+      </tr>
+      <tr>
+        <td>##################</td>
+        <td>##################</td>
+        <td>##################</td>
+      </tr>
+    </table>
 
-        <label>Descrever Conclusão do Trabalho Realizado</label>
-        <br>
-        <textarea name="descricao_conclusao" id="descricao_conclusao" cols="30" rows="10" readonly>
+    <br>
+
+    <label>Descrever Conclusão do Trabalho Realizado</label>
+    <br>
+    <textarea name="descricao_conclusao" id="descricao_conclusao" cols="30" rows="10" readonly>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.
         </textarea>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-        <a href="../Envios/envio_relatorio_contratante.html"><button type="button">Enviar</button></a>
+    <a href="../Envios/envio_relatorio_contratante.html"><button type="button">Enviar</button></a>
 
-    </form>
+  </form>
 </body>
+
 </html>

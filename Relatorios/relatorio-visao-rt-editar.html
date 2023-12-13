@@ -1,116 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório Visão RT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório Visão RT</title>
 </head>
+
 <body>
-    <form>
-        <h3>Dados da Empresa</h3>
+  <form>
+    <h3>Dados da Empresa</h3>
 
-        <label>Nome da Empresa</label>
-        <br>
-        <input type="text" name="nome_empresa" id="nome_empresa" placeholder="Digite o nome da empresa" required>
+    <label>Nome da Empresa</label>
+    <br>
+    <input type="text" name="nome_empresa" id="nome_empresa" placeholder="Digite o nome da empresa" required>
 
-        <br>
+    <br>
 
-        <label>Nome do Responsável</label>
-        <br>
-        <input type="text" name="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável" required>
+    <label>Nome do Responsável</label>
+    <br>
+    <input type="text" name="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável"
+      required>
 
-        <br>
+    <br>
 
-        <label>Título Relatório</label>
-        <br>
-        <input type="text" name="titulo" id="titulo" placeholder="Digite o titulo" required>
+    <label>Título Relatório</label>
+    <br>
+    <input type="text" name="titulo" id="titulo" placeholder="Digite o titulo" required>
 
-        <br>
+    <br>
 
-        <label>Local</label>
-        <br>
-        <input type="text" name="local" id="local" placeholder="Digite o local" required>
+    <label>Local</label>
+    <br>
+    <input type="text" name="local" id="local" placeholder="Digite o local" required>
 
-        <br>
+    <br>
 
-        <label>Data Execução</label>
-        <br>
-        <input type="date" name="data_execucao" id="data_execucao">
+    <label>Data Execução</label>
+    <br>
+    <input type="date" name="data_execucao" id="data_execucao">
 
-        <br>
+    <br>
 
-        <label>Data de Envio</label>
-        <br>
-        <input type="date" name="data_envio" id="data_envio">
+    <label>Data de Envio</label>
+    <br>
+    <input type="date" name="data_envio" id="data_envio">
 
-        <br>
+    <br>
 
-        <h3>Dados do Responsável Técnico</h3>
-        
-        <label>Número CREA</label>
-        <br>
-        <input type="text" name="numero_crea" id="numero_crea">
+    <h3>Dados do Responsável Técnico</h3>
 
-        <br>
+    <label>Número CREA</label>
+    <br>
+    <input type="text" name="numero_crea" id="numero_crea">
 
-        <label>Cargo</label>
-        <br>
-        <select name="cargo" id="cargo" required>
-            <option value="0">Selecione o cargo</option>
-            <option value="1">Técnico</option>
-            <option value="2">Engenheiro</option>
-        </select>
+    <br>
 
-        <br>
+    <label>Cargo</label>
+    <br>
+    <select name="cargo" id="cargo" required>
+      <option value="0">Selecione o cargo</option>
+      <option value="1">Técnico</option>
+      <option value="2">Engenheiro</option>
+    </select>
 
-        <label>ART(Anotação de Responsabilidade Tecnica)</label>
-        <br>
-        <input type="text" name="art" id="art" placeholder="Digite o ART">
+    <br>
 
-        <br>
+    <label>ART(Anotação de Responsabilidade Tecnica)</label>
+    <br>
+    <input type="text" name="art" id="art" placeholder="Digite o ART">
 
-        <label>Descrição</label>
-        <br>
-        <span>digite os equipamente de ensaio utilizados e descreva as atividades de manutenção</span>
-        <br>
-        <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
+    <br>
 
-        <br>
+    <label>Descrição</label>
+    <br>
+    <span>digite os equipamentos de ensaio utilizados e descreva as atividades de manutenção</span>
+    <br>
+    <textarea name="descricao" id="descricao" cols="30" rows="10"></textarea>
 
-        <label>Tabela Equipamentos</label>
-        <table>
-            <tr>
-              <th>Equipamento 1</th>
-              <th>Equipamento 2</th>
-              <th>Equipamento 3</th>
-            </tr>
-            <tr>
-              <td>##################</td>
-              <td>##################</td>
-              <td>##################</td>
-            </tr>
-            <tr>
-              <td>##################</td>
-              <td>##################</td>
-              <td>##################</td>
-            </tr>
-          </table>
+    <br>
 
-        <br>
+    <label>Tabela Equipamentos</label>
+    <table>
+      <tr>
+        <th>Equipamento 1</th>
+        <th>Equipamento 2</th>
+        <th>Equipamento 3</th>
+      </tr>
+      <tr>
+        <td>##################</td>
+        <td>##################</td>
+        <td>##################</td>
+      </tr>
+      <tr>
+        <td>##################</td>
+        <td>##################</td>
+        <td>##################</td>
+      </tr>
+    </table>
 
-        <label>Descrever Conclusão do Trabalho Realizado</label>
-        <br>
-        <textarea name="descricao_conclusao" id="descricao_conclusao" cols="30" rows="10"></textarea>
+    <br>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+    <label>Descrever Conclusão do Trabalho Realizado</label>
+    <br>
+    <textarea name="descricao_conclusao" id="descricao_conclusao" cols="30" rows="10"></textarea>
 
-        <a href="relatorio-visao-contratante-leitura.html"><button type="button">Enviar</button></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    </form>
+    <a href="relatorio-visao-contratante-leitura.html"><button type="button">Enviar</button></a>
+
+  </form>
 </body>
+
 </html>

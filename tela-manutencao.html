@@ -3,57 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styesheet" href="styles.css">
     <title>Tela Manutenção</title>
+    
 </head>
 <body>
-    <header>
-        <h1>SubControl</h1>
-        <p>Energia com Controle, Manutenção com
-          SubControl.</p>
-    
-        <nav>
-    
-                <a href="#">Inicio</a>
-                <a href="#">Outras telas</a>
-                <a href="#">Outras telas</a>
-                <a href="#">Outras telas</a>
-                <a href="#">Outras telas</a>
-    
-        </nav>
+    <header style="background: #05a444;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    position: relative;
+    ">
+        <div style="width: 50%; padding-left: 5%;">
+            <h1>SubControl</h1>
+            <p>Energia com Controle, Manutenção com SubControl.</p>
+        </div>
+
+        <div style="display: flex; width: 50%; justify-content: right; align-items: center; padding-right: 8%;">
+            <nav>
+                <a href="Login/login.html">Login</a>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1> MANUTENÇÃO PREVENTIVA SUBESTAÇÃO DE MÉDIA TENSÃO </h1>
+        <h1 style="text-align: center;"> MANUTENÇÃO PREVENTIVA SUBESTAÇÃO DE MÉDIA TENSÃO </h1>
 
-    <form action="">
-        <label for="empresa">Empresa:</label>
-        <select name="empresa" id="empresa" required>
-            <option value="empresa1"> Empresa 1</option>
-            <option value="empresa2">Empresa 2</option>
-            <option value="cadastrar_empresa">Cadastrar Empresa</option>
-        </select><br><br>
+    <form action="" >
+        <div style="margin-bottom: 15px;">
+            <label for="empresa">Empresa:</label>
+            <select name="empresa" id="empresa" required>
+                <option value="empresa1"> Empresa 1</option>
+                <option value="empresa2">Empresa 2</option>
+                <option value="cadastrar_empresa">Cadastrar Empresa</option>
+            </select>
+        </div>
 
-        <label for="executante">Executante</label>
-        <select name="executante" id="executante" required>
-            <option value="executante1"> Executante 1</option>
-            <option value="executante2"> Executante 2</option>
-            <option value="cadastrar_executante">Cadastrar Executante</option>
-        </select><br><br>
+        <div style="margin-bottom: 15px;">
+            <label for="executante">Executante</label>
+            <select name="executante" id="executante" required>
+                <option value="executante1"> Executante 1</option>
+                <option value="executante2"> Executante 2</option>
+                <option value="cadastrar_executante">Cadastrar Executante</option>
+            </select>
+        </div>
 
-        <label for="data_execucao">Data da Execução</label>
-        <input type="date" name="data_execucao" id="data_execucao" required>
+        <div>
+            <label for="data_execucao">Data da Execução</label>
+            <input type="date" name="data_execucao" id="data_execucao" required>
+        </div>
         
-        <h2>SUBESTAÇÕES ANALISADAS</h2>
+        <h2 style="text-align: center;">SUBESTAÇÕES ANALISADAS</h2>
         <section>
             <h3>Dados da Subestação:</h3>
-            <label for="identificao"> Identificação</label>
+            <label for="identificao"> Identificação:</label>
             <select name="identificao" id="identificao" required>
                 <option value="subestacao1"> Subestação 1</option>
                 <option value="subestacao2"> Subestação 2</option>
                 <option value="informar_subestacao">Informar Subestação</option>
             </select><br><br>
 
-            <label for="localizacao"> Localização</label>
+            <label for="localizacao"> Localização:</label>
             <select name="localizacao" id="localizacao" required>
                 <option value="localizacao1"> Localizacão 1</option>
                 <option value="localizacao2"> Localizacão 2</option>
@@ -70,24 +82,45 @@
                 <option value="transformador">Transformador</option>
             </select>           
         </section>
-        <br><input type="submit" value="Finalizar">
+        <br><input type="submit" value="Finalizar Manutenção da Subestação">
 
     </form>
     
     </main>
     
-    <footer>
-        <h2>Contato</h2>
-        <ul>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Linkedin</a></li>
-        </ul>
-        <ul>
-            <li>Email: manutencao@email.com</li>
-            <li>Telefone: (00) 123456789</li>
-        </ul>
-        <p> &copy; Manutenção de Substações 2023</p>
+    <footer style="background: #ffab62;
+    width: 100%;
+    height: 230px;
+    margin-top: 50px;
+    bottom: 0;
+    left: 0;
+    ">
+        <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; margin-left: 5%;">
+                <div style="display: flex; justify-content: left;  width: 15%; flex-direction: column;">
+                    <h3 style="margin-bottom: 2px;">Contato</h3>
+
+                    <h4 style="margin-bottom: 8px;">Email</h4>
+                    <p style="margin: 0px;">manutencao@email.com</p>
+
+                    <h4 style="margin-bottom: 8px;">Telefone</h4>
+                    <p style="margin: 0px;">(00) 123456789</p>
+                </div>
+                <div style="display: flex; justify-content: left;  width: 20%; flex-direction: column;">
+                    <h3 style="margin-bottom: 2px;">Sigam-nos</h3>
+                    <p>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Linkedin</a>
+                    </p>
+
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <p> &copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

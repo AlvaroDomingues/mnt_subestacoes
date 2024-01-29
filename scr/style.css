@@ -1,0 +1,74 @@
+/* estilos.css */
+
+
+main{
+  padding: 3% 5% 0% 5%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+ /* Estilos gerais para todas as tabelas */
+
+table {
+    width: 100%; /* Faz com que a tabela ocupe 100% da largura de main */
+    border-collapse: collapse; /* Combina as bordas das células para uma aparência mais limpa */
+    border: 1px solid #ddd; /* Adiciona uma borda fina em volta da tabela */
+    margin-bottom: 20px; /* Adiciona espaço na parte inferior da tabela */
+  }
+  
+  /* Estilos para as células (td)*/
+  td {
+    border: 1px solid #ddd; /* Adiciona uma borda fina em volta de células e cabeçalhos */
+    padding: 8px; /* Adiciona preenchimento interno às células e cabeçalhos */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+  
+  /* Estilo para centralizar o conteúdo nas células das tabelas */
+  .td-centralizado td{
+      border: 1px solid #ddd; /* Adiciona uma borda fina em volta de células e cabeçalhos */
+      padding: 8px; /* Adiciona preenchimento interno às células e cabeçalhos */
+      text-align: center; /* Centraliza o conteúdo dentro das células */ 
+  }
+
+  /* Estilos alternados para linhas */
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Adiciona uma cor de fundo alternada para linhas pares */
+  }
+
+  /* Centraliza o texto na primeira linha (cabeçalho) */
+tr:first-child td {
+    text-align: center;
+  }
+
+ /* Estilo para o select ocupar toda a largura da célula da tabela */
+select{
+  width: 100%;
+  box-sizing: border-box; /* Garante que a largura inclui padding e borda */
+  padding: 5px; /* Ajuste do espaçamento interno */
+}
+
+/* Estilo para o input ocupar toda a largura da célula da tabela */
+
+input {
+  width: 100%;
+  box-sizing: border-box; /* Garante que a largura inclui padding e borda */
+  padding: 5px; /* Ajuste o espaçamento interno conforme necessário */
+  margin: 0; /* Certifica-se de que não há margens externas */
+}
+
+/* Estilo para ocupar o espaço disponível */
+textarea {
+  width: 100%;
+  box-sizing: border-box; /* Garante que a largura inclua padding e borda */
+}
+
+/* Estilo específico para o input tipo submit */
+input[type="submit"] {
+  width: auto; /* Largura automática, ajustada ao conteúdo */
+  box-sizing: content-box; /* Restaura o comportamento padrão de box-sizing para o input tipo submit */
+  display: block; /* Torna o botão um bloco para centralizar */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}

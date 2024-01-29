@@ -4,119 +4,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./scr/style.css">
   <title>Relatório Visão Contratante</title>
 </head>
 
-<body>
-  <form>
-    <h3>Dados da Empresa</h3>
+<body class="relatorio_contratante_body">
 
-    <label>Nome da Empresa</label>
-    <br>
-    <input type="text" name="nome_empresa" id="nome_empresa" readonly>
+  <header>
+    <div class="subcontrol_head">
+        <h1>SubControl</h1>
+        <p>Energia com Controle, Manutenção com SubControl.</p>
+    </div>
 
-    <br>
+    <div class="login_head">
+        <nav>
+            <a href="Login/login.html">Login</a>
+        </nav>
+    </div>
+  </header>
 
-    <label>Nome do Responsável</label>
-    <br>
-    <input type="text" name="nome_responsavel" name="nome_responsavel" readonly>
+  <main class="relatorio_contratante_main">
 
-    <br>
+    <form>
+      <table class="relatorio_contratante_table">
+        <tr>
+          <th colspan="4"><h3>Dados da Empresa</h3></th>
+        </tr>
+        <tr>
+          <td>Nome da Empresa</td>
+          <td colspan="2"><input type="text" name="nome_empresa" id="nome_empresa" readonly></td>
+        </tr>
+        <tr>
+          <td>Nome do Responsável</td>
+          <td colspan="2"><input type="text" name="nome_responsavel" name="nome_responsavel" readonly></td>
+        </tr>
+        <tr>
+          <td>Título Relatório</td>
+          <td colspan="2"><input type="text" name="titulo" id="titulo" readonly></td>
+        </tr>
+        <tr>
+          <td>Local</td>
+          <td colspan="2"><input type="text" name="local" id="local" readonly></td>
+        </tr>
+        <tr>
+          <td>Data Execução</td>
+          <td colspan="2"><input type="date" name="data_execucao" id="data_execucao" value="08/12/2023" readonly></td>
+        </tr>
+        <tr>
+          <td>Data de Envio</td>
+          <td colspan="2"> <input type="date" name="data_envio" id="data_envio" value="08/12/2023" readonly></td>
+        </tr>
+        <tr>
+          <th colspan="4"><h3>Dados do Responsável Técnico</h3></th>
+        </tr>
+        <tr>
+          <td>Número CREA</td>
+          <td colspan="2"><input type="text" name="numero_crea" id="numero_crea" readonly></td>
+        </tr>
+        <tr>
+          <td>Cargo</td>
+          <td colspan="2">
+            <select name="cargo" id="cargo">
+            <!-- <option value="0">Selecione o cargo</option> -->
+            <option value="1">Técnico</option>
+            <!-- <option value="2">Engenheiro</option> -->
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>ART(Anotação de Responsabilidade Tecnica)</td>
+          <td colspan="2"><input type="text" name="art" id="art" value="9999999999999" readonly></td>
+        </tr>
+        <tr>
+          <th colspan="4">
+            <p>Descrição</p>
+            <p>digite os equipamente de ensaio utilizados e descreva as atividades de manutenção</p>
+          </th>
+          
+        </tr>
+        <tr>
+          <td colspan="3">
+            <textarea class="area_texto_descricao" name="descricao" id="descricao" cols="101" rows="10"
+            readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue 
+              metus,a faucibus metus congue vel. In porttitor vestibulum odio, 
+              vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla 
+              ullamcorper vel non ex. Donec at posuere velit. Duis laoreet 
+              semper diam bibendum lobortis. Sed posuere congue luctus. 
+              Aliquam erat volutpat. Phasellus iaculis magna vitae nisi 
+              sodales sodales. Mauris facilisis at erat lacinia commodo. 
+              Praesent non libero non turpis rhoncus tempus at quis tortor. 
+              Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, 
+              ac congue tortor metus vitae urna. Sed ac magna ut mi euismod 
+              convallis id rutrum odio. In urna justo, lacinia et mauris ac, 
+              lobortis porttitor risus.
+            </textarea>
+          </td>
+        </tr>
 
-    <label>Título Relatório</label>
-    <br>
-    <input type="text" name="titulo" id="titulo" readonly>
+        <tr>
+          <th>Equipamento 1</th>
+          <th>Equipamento 2</th>
+          <th>Equipamento 3</th>
+        </tr>
+        <tr>
+          <td>##################</td>
+          <td>##################</td>
+          <td>##################</td>
+        </tr>
+        <tr>
+          <td>##################</td>
+          <td>##################</td>
+          <td>##################</td>
+        </tr>
 
-    <br>
+        <tr>
+          <th colspan="4">
+            <h3>Descrever Conclusão do Trabalho Realizado</h3>
+          </th>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <textarea class="area_texto_descricao" name="descricao_conclusao" id="descricao_conclusao" cols="101" rows="10" readonly>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.
+            </textarea>
+          </td>
+        </tr>
+      </table>   
 
-    <label>Local</label>
-    <br>
-    <input type="text" name="local" id="local" readonly>
+      <a href="../Envios/envio_relatorio_contratante.html" type="button" class="botao_enviar"><button type="button">Enviar</button></a>
 
-    <br>
+    </form>
+  </main>
+  <footer class="footer">
+    <div class="div_principal_footer">
+        <div class="div_info_footer">
+            <div class="div_contato">
+                <h3 class="margin_dois_px">Contato</h3>
 
-    <label>Data Execução</label>
-    <br>
-    <input type="date" name="data_execucao" id="data_execucao" value="08/12/2023" readonly>
+                <h4 class="margin_oito_px">Email</h4>
+                <p class="margin_zero_px">manutencao@email.com</p>
 
-    <br>
+                <h4 class="margin_oito_px">Telefone</h4>
+                <p class="margin_zero_px">(00) 123456789</p>
+            </div>
+            <div class="div_redes_sociais">
+                <h3 class="margin_dois_px">Sigam-nos</h3>
+                <p>
+                    <a href="#" target="_blank">Instagram</a>
+                    <a href="#" target="_blank">Facebook</a>
+                    <a href="#" target="_blank">Linkedin</a>
+                </p>
 
-    <label>Data de Envio</label>
-    <br>
-    <input type="date" name="data_envio" id="data_envio" value="08/12/2023" readonly>
 
-    <br>
-
-    <h3>Dados do Responsável Técnico</h3>
-
-    <label>Número CREA</label>
-    <br>
-    <input type="text" name="numero_crea" id="numero_crea" readonly>
-
-    <br>
-
-    <label>Cargo</label>
-    <br>
-    <select name="cargo" id="cargo">
-      <!-- <option value="0">Selecione o cargo</option> -->
-      <option value="1">Técnico</option>
-      <!-- <option value="2">Engenheiro</option> -->
-    </select>
-
-    <br>
-
-    <label>ART(Anotação de Responsabilidade Tecnica)</label>
-    <br>
-    <input type="text" name="art" id="art" value="9999999999999" readonly>
-
-    <br>
-
-    <label>Descrição</label>
-    <br>
-    <span>digite os equipamente de ensaio utilizados e descreva as atividades de manutenção</span>
-    <br>
-    <textarea name="descricao" id="descricao" cols="30" rows="10"
-      readonly>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.</textarea>
-
-    <br>
-
-    <label>Tabela Equipamentos</label>
-    <table>
-      <tr>
-        <th>Equipamento 1</th>
-        <th>Equipamento 2</th>
-        <th>Equipamento 3</th>
-      </tr>
-      <tr>
-        <td>##################</td>
-        <td>##################</td>
-        <td>##################</td>
-      </tr>
-      <tr>
-        <td>##################</td>
-        <td>##################</td>
-        <td>##################</td>
-      </tr>
-    </table>
-
-    <br>
-
-    <label>Descrever Conclusão do Trabalho Realizado</label>
-    <br>
-    <textarea name="descricao_conclusao" id="descricao_conclusao" cols="30" rows="10" readonly>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et lacus eu sapien dapibus laoreet. Cras lobortis congue metus, a faucibus metus congue vel. In porttitor vestibulum odio, vel viverra nisi ultricies vel. Aliquam ut nisi a leo fringilla ullamcorper vel non ex. Donec at posuere velit. Duis laoreet semper diam bibendum lobortis. Sed posuere congue luctus. Aliquam erat volutpat. Phasellus iaculis magna vitae nisi sodales sodales. Mauris facilisis at erat lacinia commodo. Praesent non libero non turpis rhoncus tempus at quis tortor. Nam fermentum, urna eu facilisis cursus, ante sem auctor urna, ac congue tortor metus vitae urna. Sed ac magna ut mi euismod convallis id rutrum odio. In urna justo, lacinia et mauris ac, lobortis porttitor risus.
-        </textarea>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <a href="../Envios/envio_relatorio_contratante.html"><button type="button">Enviar</button></a>
-
-  </form>
+            </div>
+        </div>
+        <div class="div_copywrite">
+            <p> &copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
+        </div>
+    </div>
+  </footer>
 </body>
 
 </html>

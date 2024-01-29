@@ -5,60 +5,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
   <header>
     <h1>SubControl</h1>
     <p>Energia com Controle, Manutenção com SubControl.</p>
-
-    <nav>
+  </header>
+    <nav class="inicio">
       <a href="../index.html">Inicio</a>
     </nav>
-  </header>
+  
 
   <main>
     <h1>Login</h1>
-    <form action="">
-      <div>
-        <label>Insira seu email:</label>
-        <input type="email" name="email" id="">
-      </div>
+    <form>
+      <input name="name" autocomplete="off" required />
+      <label for="name">
+        <span>Email</span>
+      </label>
+    </form>
 
-      <div>
-        <label>Insira sua senha:</label>
-        <input type="password" name="senha" id="">
-      </div>
+    <form>
+      <input type="password" name="senha" autocomplete="off" required />
+      <label for="senha">
+        <span>Senha</span>
+      </label>
+    </form>
 
-      <button><a href="../Manutencao/tela-manutencao.html">Login</a></button>
+      <button class="botao"><a href="../Manutencao/tela-manutencao.html">Login</a></button>
 
       <p>Esqueceu sua senha? <a href="#">Clique aqui</a></p>
-      <p>Ainda não é cadastrado? Crie uma conta.</p>
+      <p>Ainda não é cadastrado? <a href="#">Crie uma conta.</a></p>
 
       <nav>
-        <a href="../Cadastro/casdastro_cliente.html">Cadastro cliente | </a>
+        <a href="../Cadastro/casdastro_cliente.html">Cadastro cliente  </a>
 
-        <a href="../Cadastro/cadastro_RT.html"> Cadastro responsável técnico(RT) | </a>
+        <a href="../Cadastro/cadastro_RT.html"> Cadastro responsável técnico(RT)  </a>
 
-        <a href="../Cadastro/cadastro_executante.html"> Cadastro executante | </a>
+        <a href="../Cadastro/cadastro_executante.html"> Cadastro executante  </a>
       </nav>
 
-    </form>
+    
   </main>
 
-  <footer>
-    <h2>Contato</h2>
-    <ul>
-      <li><a href="#" target="_blank">Instagram</a></li>
-      <li><a href="#" target="_blank">Facebook</a></li>
-      <li><a href="#" target="_blank">Linkedin</a></li>
-    </ul>
-    <ul>
-      <li>Email: manutencao@email.com</li>
-      <li>Telefone: (00) 123456789</li>
-    </ul>
-    <p> &copy; Manutenção de Substações 2023</p>
-  </footer>
+
 
 </body>
 

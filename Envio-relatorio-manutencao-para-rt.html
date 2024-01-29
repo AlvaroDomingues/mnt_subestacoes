@@ -5,30 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envio dos dados da manutenção realizada para o RT</title>
+    <link rel="stylesheet" href="./scr/style.css">
 </head>
-<header>
-    <h1>SubControl</h1>
-    <p>Energia com Controle, Manutenção com
-        SubControl.</p>
-
-    <nav>
-
-        <a href="#">Inicio</a>
-        <a href="#">Outras telas</a>
-        <a href="#">Outras telas</a>
-        <a href="#">Outras telas</a>
-        <a href="#">Outras telas</a>
-
-    </nav>
-</header>
 
 <body>
-    <h1>Envio dos dados de manutenção realizada para o Responsável Técnico</h1>
+    <header style="background: #05a444;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    position: relative;
+    ">
+        <div style="width: 50%; padding-left: 5%;">
+            <h1>SubControl</h1>
+            <p>Energia com Controle, Manutenção com SubControl.</p>
+        </div>
+
+        <div style="display: flex; width: 50%; justify-content: right; align-items: center; padding-right: 8%;">
+            <nav>
+                <a href="Login/login.html">Login</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+    <h1>ENVIO DOS DADOS DE MANUTENÇÃO REALIZADA PARA O RESPONSÁVEL TÉCNICO</h1>
     <div class="form-envio">
         <table tyle="width: 100%;" border="1">
             <!-- Seleção de responsável Técnico-->
             <tr>
-                <td>Selecione o responsável Técnico para aprovação</td>
+                <td>Selecione o Responsável Técnico</td>
                 <td>
                     <select name="" id="">
                         <option value="user1">Rand</option>
@@ -36,27 +42,56 @@
                     </select>
                 </td>
             </tr>
-        </table>
+            <tr>
+                <td><button>Visualizar Dados em PDF</button></td>
+                <td><button>Editar Dados</button></td>
 
-        </br>
-        <button>Visualizar Dados em PDF</button>
-        <button>Editar Dados</button>
-        </br>
-        </br>
-        <button>Envio dos dados da manutenção</button>
+            </tr>
+        </table>
     </div>
-    <footer>
-        <h2>Contato</h2>
-        <ul>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Linkedin</a></li>
-        </ul>
-        <ul>
-            <li>Email: manutencao@email.com</li>
-            <li>Telefone: (00) 123456789</li>
-        </ul>
-        <p> &copy; Manutenção de Substações 2023</p>
+    <form action="">
+        <label for="observacoes"><h3>Observações</h3></label>
+        <textarea name="observacoes" id="observacoes" cols="120" rows="10"></textarea>
+        <br><br><input type="submit" value="Envio dos dados da manutenção">
+    </form><br>
+
+</main>
+    <footer style="background: #ffab62;
+    width: 100%;
+    height: 230px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    ">
+        <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; margin-left: 5%;">
+                <div style="display: flex; justify-content: left;  width: 15%; flex-direction: column;">
+                    <h3 style="margin-bottom: 2px;">Contato</h3>
+
+                    <h4 style="margin-bottom: 8px;">Email</h4>
+                    <p style="margin: 0px;">manutencao@email.com</p>
+
+                    <h4 style="margin-bottom: 8px;">Telefone</h4>
+                    <p style="margin: 0px;">(00) 123456789</p>
+                </div>
+                <div style="display: flex; justify-content: left;  width: 20%; flex-direction: column;">
+                    <h3 style="margin-bottom: 2px;">Sigam-nos</h3>
+                    <p>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Linkedin</a>
+                    </p>
+
+
+                </div>
+            </div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <p> &copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
+            </div>
+        </div>
     </footer>
 </body>
+
 </html>

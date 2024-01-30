@@ -9,7 +9,7 @@
 
   /*inicio esilo header*/
   header {
-    background: #05a444;
+    background-color:#4169E1;
     width: 100%;
     height: 120px;
     bottom: 0;
@@ -28,6 +28,22 @@
     justify-content: right; 
     align-items: center; 
     padding-right: 8%;
+  }
+
+  header div h1{
+    color: white;
+  }
+
+  header div p {
+    color: white;
+  }
+
+  .inicio{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
   }
   /*fim esilo header*/
 
@@ -97,6 +113,16 @@
     bottom: 0;
     left: 0;    
   }
+  footer h3{
+    color: white;
+  }
+  footer h4{
+    color: white;
+  }
+
+  footer p {
+    color: white
+  }
 
   .div_principal_footer {
     display: flex; 
@@ -136,5 +162,13 @@
 
   .div_copywrite {
     display: flex; justify-content: center; align-items: center;
+  }
+
+  .redes{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
   }
   /*Fim estilo footer*/

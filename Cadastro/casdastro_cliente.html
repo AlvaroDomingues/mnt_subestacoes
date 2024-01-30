@@ -5,63 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
+  <link rel="stylesheet" href="cadastro.css">
 </head>
 
 <body>
   <header>
     <h1>SubControl</h1>
     <p>Energia com Controle, Manutenção com SubControl.</p>
-
-    <nav>
+  </header>
+    <nav class="inicio">
       <a href="../index.html">Inicio</a>
     </nav>
-  </header>
+
 
   <main>
     <h1>Cadastro de cliente</h1>
-    <div><label>Nome do responsável: <input type="text"></label></div>
+    <form>
+      <input name="email" autocomplete="off" required />
+      <label for="email">
+        <span>Email</span>
+      </label>
+    </form>
 
-    <div><label>Sobrenome: <input type="text"></label></div>
+    <form>
+      <input name="endereço" autocomplete="off" required />
+      <label for="endereço">
+        <span>Endereço</span>
+      </label>
+    </form>
 
-    <div><label>Insira seu email: <input type="email" name="email" id=""></label></div>
+    <form>
+      <input name="cnpj" autocomplete="off" required />
+      <label for="cnpj">
+        <span>CNPJ</span>
+      </label>
+    </form>
 
-    <div>
-      <label for="">Endereço: </label>
-      <input type="text">
-    </div>
+    <form>
+      <input name="senha" autocomplete="off" required />
+      <label for="senha">
+        <span>Senha</span>
+      </label>
+    </form>
 
-    <div>
-      <label for="">Digite seu CNPJ: </label>
-      <input type="number" name="" id="">
-    </div>
+    <form>
+      <input name="senha" autocomplete="off" required />
+      <label for="senha">
+        <span>Insira sua senha novamente</span>
+      </label>
+    </form>
 
-    <div>
-      <label>Insira sua senha: <input type="password" name="senha" id=""></label>
-    </div>
+    <p>Concorda com os termos de uso?</p>
 
-    <div>
-      <label>Insira sua senha novamente: <input type="password" name="senha" id=""></label>
-    </div>
-
-    <p>Concorda com os termos de uso? <input type="checkbox" name="termos" id=""></p>
-
-    <button>Cadastrar</button>
+    <button class="botao"><a href="#">Cadastrar</a></button>
 
   </main>
 
-  <footer>
-    <h2>Contato</h2>
-    <ul>
-      <li><a href="#" target="_blank">Instagram</a></li>
-      <li><a href="#" target="_blank">Facebook</a></li>
-      <li><a href="#" target="_blank">Linkedin</a></li>
-    </ul>
-    <ul>
-      <li>Email: manutencao@email.com</li>
-      <li>Telefone: (00) 123456789</li>
-    </ul>
-    <p> &copy; Manutenção de Substações 2023</p>
-  </footer>
+
 
 </body>
 

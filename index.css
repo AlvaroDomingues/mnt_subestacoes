@@ -41,6 +41,10 @@ body{
   font-size: var(--size15);
 }
 
+.textJustify {
+  text-align: justify;
+}
+
 .marginBottom {
   margin-bottom: 50px;
 }

@@ -6,125 +6,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bem-vindo</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 
 <body>
 
-    <header>
-        
-    <h1>Subcontrol</h1>
-    <p>Energia com controle, manutenção com Subcontrol</p>
-    </header>
-
-    <nav>
-    <a href="Login/login.html">Login</a>
-    </nav>
+    <header>  
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><a href="./index.html">Subcontrol</a></label>
+            <ul>
+              <!-- <li><a href="index.html" class="size20">Home</a></li> -->
+              <li><a href="#quemSomos" class="size20">Quem Somos</a></li>
+              <li><a href="#substacao" class="size20">Substação</a></li>
+              <li><a href="#classificacao" class="size20">Classificações</a></li>
+              <li><a href="#noticias" class="size20">Notícias</a></li>
+              <li><a href="./Login/login.html" class="size20">Login</a></li>
+            </ul>
+          </nav>
+    </header>    
 
     <main>
-    <article>
-        <h1>Quem somos nós?</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quaerat, dolorem facere aperiam enim dolorum minus neque impedit repudiandae sapiente sequi assumenda beatae unde esse tempore! Cum maxime saepe quo!</p>
+        <article>
+            <h1 class="size30" id="quemSomos">Quem somos nós?</h1>
+            <p class="size20 marginBottom">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, 
+                quaerat, dolorem facere aperiam enim dolorum minus neque impedit 
+                repudiandae sapiente sequi assumenda beatae unde esse tempore! 
+                Cum maxime saepe quo!
+            </p>
 
-        <h2>O que é uma subestação</h2>
+            <h2 class="size30" id="substacao">O que é uma subestação</h2>
 
-        <p>  Inicialmente definiremos uma subestação como sendo um conjunto de equipamentos, dispositivos e condutores elétricos, usados para alterar características (parâmetros) de energia (tensão, corrente, frequência) permitindo a distribuição em níveis adequados de consumo.  São partes do sistema de elétrico de potência e produzem modificações nesse sistema.
-    
-        </p>
+            <p class="size20 marginBottom"> 
+                Inicialmente definiremos uma subestação como sendo um conjunto de 
+                equipamentos, dispositivos e condutores elétricos, usados para 
+                alterar características (parâmetros) de energia (tensão, corrente, 
+                frequência) permitindo a distribuição em níveis adequados de 
+                consumo.  São partes do sistema de elétrico de potência e 
+                produzem modificações nesse sistema.        
+            </p>
 
-        <h3>Como podem ser classificadas?</h3>
-        <p class="lista">A bibliografia acerca das subestações é abrangente. A seguir elegemos algumas das principais classificações.</p>
+            <h3 class="size30" id="classificacao">Como podem ser classificadas?</h3>            
 
-        <h4 class="lista">Quanto à função</h4>
-        <p class="lista">Muitos equipamentos podem ser usados em uma subestação elétrica. Aqui temos exemplos de alguns deles.</p>
+            <div class="marginBottom lista">
+                <p class="size20">
+                    A bibliografia acerca das subestações é abrangente. 
+                    A seguir elegemos algumas das principais classificações.
+                </p>
 
-            <ul class="lista">
-            <li>1 - Subestação Transformadora </li>
-            <li>2 - Subestação de Manobra</li>
-            <li>3 - Subestação de Compensação</li>
+                <h4 class="size30">Quanto à função</h4>
+                <p class="size20">
+                    Muitos equipamentos podem ser usados em uma subestação 
+                    elétrica. Aqui temos exemplos de alguns deles.
+                </p>
 
-
-            </ul>
-
-            <h4 class="lista">Quanto à função ao Sistema Elétrico Global</h4>
-    
-                <ul class="lista">
-                <li>1 - Subestação Central de Transmissão </li>
-                <li>2 - Subestação Receptora de Transmissão</li>
-                <li>3 - Subestação de Subtransmissão</li>
-                <li>4 - Subestação de Consumidor</li>
-    
-    
+                <ul>
+                    <li class="size20">1 - Subestação Transformadora </li>
+                    <li class="size20">2 - Subestação de Manobra</li>
+                    <li class="size20">3 - Subestação de Compensação</li>
                 </ul>
 
-                <h4 class="lista">Quanto à capacidade de transformação e das características de utilização</h4>
-    
-                <ul class="lista">
-                <li>1 - BAIXA TENSÃO </li>
-                <li>2 - MÉDIA TENSÃO</li>
-                <li>3 - ALTA TENSÃO</li>
-                <li>4 - EXTRA ALTA TENSÃO</li>
-    
-    
+                <h4 class="size30">Quanto à função ao Sistema Elétrico Global</h4>
+            
+                <ul>
+                    <li class="size20">1 - Subestação Central de Transmissão </li>
+                    <li class="size20">2 - Subestação Receptora de Transmissão</li>
+                    <li class="size20">3 - Subestação de Subtransmissão</li>
+                    <li class="size20">4 - Subestação de Consumidor</li>
                 </ul>
 
-                <h4 class="lista">Quanto ao tipo de instalação</h4>
-    
-                <ul class="lista">
-                <li>1 - Céu aberto </li>
-                <li>2 - Internas</li>
-    
-    
+                <h4 class="size30">
+                    Quanto à capacidade de transformação e das características de 
+                    utilização
+                </h4>
+
+                <ul>
+                    <li class="size20">1 - BAIXA TENSÃO </li>
+                    <li class="size20">2 - MÉDIA TENSÃO</li>
+                    <li class="size20">3 - ALTA TENSÃO</li>
+                    <li class="size20">4 - EXTRA ALTA TENSÃO</li>
                 </ul>
 
-            </ul>
+                <h4 class="size30">Quanto ao tipo de instalação</h4>
 
-            <h4 class="lista">Quanto ao tipo construtivo de equipamentos</h4>
+                <ul>
+                    <li class="size20">1 - Céu aberto </li>
+                    <li class="size20">2 - Internas</li>
+                </ul>
 
-            <ul class="lista">
-            <li>1 - Subestações com operador </li>
-            <li>2 - Semiautomatizadas</li>
-            <li>3 - Automatizadas</li>
+                <h4 class="size30">Quanto ao tipo construtivo de equipamentos</h4>
 
-
-            </ul>
-
-
-
-
-
-
-
-
-        
-        
-            <h2> Notícias</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime reprehenderit perspiciatis iste aliquam atque saepe et temporibus nihil fuga pariatur libero molestias, a amet impedit. Quia eum eligendi reiciendis assumenda.</p>
-    </article>
+                <ul>
+                    <li class="size20">1 - Subestações com operador </li>
+                    <li class="size20">2 - Semiautomatizadas</li>
+                    <li class="size20">3 - Automatizadas</li>
+                </ul>
+            </div>
+                        
+            <h2 class="size30" id="noticias"> Notícias</h2>
+            <p class="size20">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime 
+                reprehenderit perspiciatis iste aliquam atque saepe et 
+                temporibus nihil fuga pariatur libero molestias, a amet 
+                impedit. Quia eum eligendi reiciendis assumenda.
+            </p>
+        </article>
     </main>
-    <footer>
-    <h3>Contato</h3>
-    <h4>Email</h4>
-    <p style="margin: 0px;">manutencao@email.com</p>
 
-    <h4>Telefone</h4>
-    <p>(00) 123456789</p>
-</div>
-<div>
-    <h3>Sigam-nos</h3>
-    <p>
-        <a href="#" target="_blank">Instagram</a>
-        <a href="#" target="_blank">Facebook</a>
-        <a href="#" target="_blank">Linkedin</a>
-    </p>
-
-
-</div>
-</div>
-<div>
-<p> &copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
-</div>
-</div>
-    <p></p>
-    </footer>
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Contatos</h4>
+              <ul>
+                <li>manutencao@email.com</li>
+                <li>(00) 12345678</li>
+              </ul>
+            </div>
+            <!-- <div class="footer-col">
+              <h4>Get Help</h4>
+              <ul>
+                <li><a href="#">>> FAQ</a></li>
+                <li><a href="#">>> Order Cancelation</a></li>
+                <li><a href="#">>> Order status</a></li>
+                <li><a href="#">>> Payment options</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Services</h4>
+              <ul>
+                <li><a href="#">>> SEO</a></li>
+                <li><a href="#">>> Custom Website</a></li>
+                <li><a href="#">>> WordPress Website</a></li>
+                <li><a href="#">>> Digital Marketing</a></li>
+              </ul>
+            </div> -->
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright-footer">
+        <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
+      </div>
 </body>
 </html>

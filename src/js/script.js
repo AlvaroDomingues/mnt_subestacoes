@@ -1,36 +1,22 @@
-const slider = document.querySelectorAll('.slider');
-const btnPrev = document.getElementById('prev-button');
-const btnNext = document.getElementById('next-button');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let currentSlide = 0;
-
-function hideSlider() {
-  slider.forEach(item => item.classList.remove('on'))
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-function showSlider() {
-  slider[currentSlide].classList.add('on')
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-function nextSlider() {
-  hideSlider()
-  if(currentSlide === slider.length -1) {
-    currentSlide = 0
-  } else {
-    currentSlide++
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  showSlider()
+ 
+  slides[slideIndex-1].style.display = "block";
 }
-
-function prevSlider() {
-  hideSlider()
-  if(currentSlide === 0) {
-    currentSlide = slider.length -1
-  } else {
-    currentSlide--
-  }
-  showSlider()
-}
-
-btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider)

@@ -4,104 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SubControl - Registrar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="./src/css/registro.css">
 </head>
 <body>
-    <div id="container">
-        <div class="tab-buttons">
-            <button class="tab-btn active" content-id="home">
-                Home
-            </button>
 
-            <button class="tab-btn" content-id="services">
-                Services
-            </button>
+    <header>  
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">
+                <a href="../index.html">                
+                <img src="../src/Logo/img_logo_subcontrol2.png" style="width:160px" alt="logoSubcontrol">
+                </a>
+            </label>
+            <ul>
+                <!-- <li><a href="index.html" class="size20">Home</a></li> -->
+                <li><a href="#quemSomos" class="size15 tagA">Quem Somos</a></li>
+                <li><a href="#substacao" class="size15">Substação</a></li>
+                <li><a href="#classificacao" class="size15">Classificações</a></li>
+                <li><a href="#noticias" class="size15">Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <button class="tab-btn" content-id="contacts">
-                Contacts
-            </button>
+    <main>
+        <div id="container">
+            <div class="tab-buttons">
+                <button class="tab-btn active" content-id="home">
+                    Cadastro Cliente
+                </button>
 
-            <button class="tab-btn" content-id="location">
-                Location
-            </button>
+                <button class="tab-btn" content-id="tecnico-rt">
+                    Cadastro Responsável Técnico(RT)
+                </button>
 
-            <button class="tab-btn" content-id="about">
-                About
-            </button>
+                <button class="tab-btn" content-id="executante">
+                    Cadastro Executante
+                </button>
+            </div>
+
+            <div class="tab-contents">
+                <div class="content" id="home">
+                    <div class="infos">
+                        <form method="POST" class="formLogin">
+                            <p>Preencha com seus dados os campo abaixo para 
+                                realizar o cadastro.
+                            </p>
+                            <!--Email-->
+                            <label for="email">E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail" 
+                            autofocus="true" />
+
+                            <!--Endereço-->
+                            <label for="endereco">Endereço</label>
+                            <input type="text" placeholder="Digite seu endereço" autofocus="true" />
+
+                            <!--CNPJ-->
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" placeholder="Digite seu CNPJ" 
+                            autofocus="true" />
+
+                            <!--Senha-->
+                            <label for="password">Senha</label>
+                            <input type="password" placeholder="Digite sua senha" />
+
+                            <!--Confirmar Senha-->
+                            <label for="password">Insira sua senha novamente</label>
+                            <input type="password" placeholder="Digite sua novamente senha" />
+
+                            <!--Check Opções-->
+                            <div>                            
+                                <input type="checkbox"> 
+                                <span>Concorda com os termos de uso?</span>
+                            </div>                       
+
+                            <!--Botão Cadastrar-->
+                            <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="content" id="tecnico-rt">
+                    <div class="infos">
+                        <form method="POST" class="formLogin">
+                            <p>Preencha com seus dados os campo abaixo para 
+                                realizar o cadastro.
+                            </p>
+
+                            <!--Nome-->
+                            <label for="nome">Nome</label>
+                            <input type="text" placeholder="Digite seu nome" 
+                            autofocus="true" />
+
+                            <!--Sobrenome-->
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" placeholder="Digite seu sobrenome" 
+                            autofocus="true" />
+
+                            <!--Email-->
+                            <label for="email">E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail" 
+                            autofocus="true" />
+
+                            <!--CREA-->
+                            <label for="crea">CREA</label>
+                            <input type="text" placeholder="Digite o CREA" 
+                            autofocus="true" />
+
+                            <!--CNPJ-->
+                            <label for="cnpj">CNPJ</label>
+                            <input type="text" placeholder="Digite seu CNPJ" 
+                            autofocus="true" />
+
+                            <!--Senha-->
+                            <label for="password">Senha</label>
+                            <input type="password" placeholder="Digite sua senha" />
+
+                            <!--Confirmar Senha-->
+                            <label for="password">Insira sua senha novamente</label>
+                            <input type="password" placeholder="Digite sua novamente senha" />
+
+                            <!--Check Opções-->
+                            <div>                            
+                                <input type="checkbox"> 
+                                <span>Concorda com os termos de uso?</span>
+                            </div>                       
+
+                            <!--Botão Cadastrar-->
+                            <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
+                    </div>
+                </div>
+
+                <div class="content" id="executante">
+                    <div class="infos">
+                        <form method="POST" class="formLogin">
+                            <p>Preencha com seus dados os campo abaixo para 
+                                realizar o cadastro.
+                            </p>
+
+                            <!--Nome-->
+                            <label for="nome">Nome</label>
+                            <input type="text" placeholder="Digite seu nome" 
+                            autofocus="true" />
+
+                            <!--Sobrenome-->
+                            <label for="sobrenome">Sobrenome</label>
+                            <input type="text" placeholder="Digite seu sobrenome" 
+                            autofocus="true" />
+
+                            <!--Email-->
+                            <label for="email">E-mail</label>
+                            <input type="email" placeholder="Digite seu e-mail" 
+                            autofocus="true" />
+
+                            <!--CREA-->
+                            <label for="crea">CREA</label>
+                            <input type="text" placeholder="Digite o CREA" 
+                            autofocus="true" />
+
+                            <!--Senha-->
+                            <label for="password">Senha</label>
+                            <input type="password" placeholder="Digite sua senha" />
+
+                            <!--Confirmar Senha-->
+                            <label for="password">Insira sua senha novamente</label>
+                            <input type="password" placeholder="Digite sua novamente senha" />
+
+                            <!--Check Opções-->
+                            <div>                            
+                                <input type="checkbox"> 
+                                <span>Concorda com os termos de uso?</span>
+                            </div>                       
+
+                            <!--Botão Cadastrar-->
+                            <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-        <div class="tab-contents">
-            <div class="content" id="home">
-                <img src="src/images/home.svg" class="content-img" alt="home image">
-
-                <div class="infos">
-                    <h1 class="content-title">
-                        Home
-                    </h1>
-
-                    <p class="content-description">
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
-                    </p>
-                </div>
+    <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col">
+              <h4>Contatos</h4>
+              <ul>
+                <li>manutencao@email.com</li>
+                <li>(00) 12345678</li>
+              </ul>
             </div>
-
-            <div class="content" id="services">
-                <img src="src/images/services.svg" class="content-img" alt="services image">
-
-                <div class="infos">
-                    <h1 class="content-title">
-                        Services
-                    </h1>
-
-                    <p class="content-description">
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
-                    </p>
-                </div>
+            <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
             </div>
-
-            <div class="content" id="contacts">
-                <img src="src/images/contacts.svg" class="content-img" alt="contacts image">
-
-                <div class="infos">
-                    <h1 class="content-title">
-                        Contacts
-                    </h1>
-
-                    <p class="content-description">
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
-                    </p>
-                </div>
-            </div>
-
-            <div class="content" id="location">
-                <img src="src/images/location.svg" class="content-img" alt="location image">
-
-                <div class="infos">
-                    <h1 class="content-title">
-                        Location
-                    </h1>
-
-                    <p class="content-description">
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
-                    </p>
-                </div>
-            </div>
-
-            <div class="content" id="about">
-                <img src="src/images/about.svg" class="content-img" alt="about image">
-
-                <div class="infos">
-                    <h1 class="content-title">
-                        About
-                    </h1>
-
-                    <p class="content-description">
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, repellat! Id ab similique velit, molestiae, aliquam illum officiis sit totam rem voluptas magnam, atque dicta magni perferendis recusandae reiciendis necessitatibus! 
-                    </p>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
+      </footer>
+      <div class="copyright-footer">
+        <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2024</p>
+      </div>
 
     <script src="./src/js/registro.js"></script>
 </body>

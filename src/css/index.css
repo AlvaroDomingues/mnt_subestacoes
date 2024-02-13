@@ -51,6 +51,8 @@ body{
   margin-bottom: 50px;
 }
 
+/*inicio estilo header*/
+
 nav{
   background: #acc6d0;
   height: 80px;
@@ -104,7 +106,7 @@ a.active,a:hover{
     font-size: 16px;
   }
 }
-@media (max-width: 858px){
+@media (max-width: 1021px){
   .checkbtn{
     display: block;
   }
@@ -134,6 +136,8 @@ a.active,a:hover{
     left: 0;
   }
 }
+
+/*fim estilo header*/
 
 main{
   background-color: white;

@@ -9,6 +9,8 @@
   --cor02:#001F3F;
   --cor03:#FFA500;
   --cor04:#FFDAB9;
+  --cor05:#fee82c;
+  --cor06:#12223c;
   --fonte0: Arial, Helvetica, sans-serif;
   --fonte1: 'Bebas Neue', cursive;
   --fonte2: 'Android', sans-serif;
@@ -50,7 +52,7 @@ body{
 }
 
 nav{
-  background: #ffffff;
+  background: #acc6d0;
   height: 80px;
   width: 100%;
 }
@@ -189,7 +191,7 @@ main li{
 }
 
 .lista{
-  background-color: #87CEEB;
+  background-color: #acc6d0;
   border-radius: 10px;
   padding: 15px;
 }
@@ -209,7 +211,7 @@ ul{
     list-style: none;
 }
 .footer{
-    background-color: var(--cor03);
+    background-color: var(--cor06);
     padding: 70px 0;
 }
 .footer-col{
@@ -218,7 +220,7 @@ ul{
 }
 .footer-col h4{
     font-size: 18px;
-    color: var(--cor02);
+    color: white;
     text-transform: capitalize;
     margin-bottom: 35px;
     font-weight: 500;
@@ -229,7 +231,7 @@ ul{
     position: absolute;
     left:0;
     bottom: -10px;
-    background-color: var(--cor02);
+    background-color: white;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
@@ -237,13 +239,15 @@ ul{
 .footer-col ul li:not(:last-child){
     margin-bottom: 10px;
 }
+.footer-col li {
+  color: white;
+}
 .footer-col ul li a{
     font-size: 16px;
     text-transform: capitalize;
     color: var(--cor02);
     text-decoration: none;
     font-weight: 300;
-    color: var(--cor02);
     display: block;
     transition: all 0.3s ease;
 }
@@ -255,7 +259,7 @@ ul{
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: #222222;
+    background-color: rgb(153, 153, 153);
     margin:0 10px 10px 0;
     text-align: center;
     line-height: 40px;

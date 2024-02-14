@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subcontrol - Esqueci Minha Senha</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="./src/css/esqueci_senha.css">
 </head>
+
 <body>
-    Página Esqueci Minha Senha
+
+<header>  
+  <nav>
+  <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">
+      <a href="../index.html">                
+        <img src="../src/Logo/img_logo_subcontrol2.png" style="width:160px" alt="logoSubcontrol">
+      </a>
+    </label>
+    <ul>
+      <!-- <li><a href="index.html" class="size20">Home</a></li> -->
+      <li><a href="#quemSomos" class="size15 tagA">Quem Somos</a></li>
+      <li><a href="#substacao" class="size15">Substação</a></li>
+      <li><a href="#classificacao" class="size15">Classificações</a></li>
+      <li><a href="#noticias" class="size15">Notícias</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="page">
+    <form method="POST" class="formLogin">
+        <h1>Esqueceu a senha?</h1>
+        <p>Digite seu e-mail cadastrado para redefinir sua senha</p>
+        <label for="email">E-mail</label>
+        <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <input type="submit" value="Acessar" class="btn" />
+    </form>
+  </div>
+</main>  
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Contatos</h4>
+          <ul>
+            <li>manutencao@email.com</li>
+            <li>(00) 12345678</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="copyright-footer">
+    <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2024</p>
+  </div>
 </body>
+
 </html>

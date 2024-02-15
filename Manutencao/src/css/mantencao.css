@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+  font-family:'Android' ;
+  src: url(fontes/idroid.otf);
+}
+:root {
+  --cor00: #4169E1;
+  --cor01:#87CEEB;
+  --cor02:#001F3F;
+  --cor03:#FFA500;
+  --cor04:#FFDAB9;
+  --cor05:#fee82c;
+  --cor06:#12223c;
+  --cor06: #bbcacf;
+  --fonte0: Arial, Helvetica, sans-serif;
+  --fonte1: 'Bebas Neue', cursive;
+  --fonte2: 'Android', sans-serif;
+  --size20: 20px;
+  --size15: 15px;
+  --size30: 30px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:var(--fonte0);
+  background-color:#feffff;
+}
+
+.container {
+    width: 80%;
+    height: 1000px;
+    margin: auto;
+}
+
+/*inicio estilo elementos tabela*/
+.titulo {
+    text-align: center;
+    margin: 50px 0px 30px 0px;
+}
+
+.relatorio_contratante_table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    margin-bottom: 80px;
+  }
+
+  td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .tamanho_tabela_equipamentos {
+    width: 32%;
+  }
+
+  .thExpansao {
+    padding: 20px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  select{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0;
+  }
+
+  .tagA {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .btn {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    border: none !important;
+    border-radius: 10px;
+    transition: all linear 160ms;
+    padding: 20px 40px 20px 40px;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background-color: #f2f2f2;  
+  }
+
+  /*fim estilo elementos tabela*/

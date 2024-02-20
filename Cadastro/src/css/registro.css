@@ -27,7 +27,7 @@
   body{
     font-family:var(--fonte0) ;
     color: black;
-    background-color:white ;   
+    background-color:white ;
   }
 
 /*tipo fontes*/
@@ -134,13 +134,12 @@ nav{
   /*fim estilo header*/
 
 #container {
-    /* background-color: var(--cor02); */
-    margin: auto;
+    /* margin: auto; */
+    margin: auto auto 250px auto;
     width: 80%;
     height: 100%;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
 }
 
 .tab-buttons {
@@ -328,6 +327,9 @@ nav{
   .footer{
     background-color: var(--cor06);
     padding: 70px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   .footer-col{
    width: 25%;
@@ -387,16 +389,18 @@ nav{
     background-color: #ffffff;
   }
   .copyright-footer{
-  display:flex;
-  justify-content: center;
-  align-items: center;
   background-color: #222222;
   padding:20px;
   color:#999999;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
   }
-  .copyright-footer p a{
-  color:#e91e63;
+
+  .copyright-footer p {
+    text-align: center;
   }
+  
   /*responsive*/
   @media(max-width: 767px){
   .footer-col{

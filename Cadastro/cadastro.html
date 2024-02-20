@@ -44,9 +44,19 @@
                 <button class="tab-btn" content-id="executante">
                     Cadastro Executante
                 </button>
+
+                <button class="tab-btn" content-id="ordem-servico">
+                    Cadastro Ordem de Serviço
+                </button>
+
+                <button class="tab-btn" content-id="equi-tec">
+                    Cadastro Equipamentos de Teste
+                </button>
             </div>
 
             <div class="tab-contents">
+
+                <!--inicio Cadastro Cliente-->
                 <div class="content" id="home">
                     <div class="infos">
                         <form method="POST" class="formLogin">
@@ -86,7 +96,9 @@
                         </form>
                     </div>
                 </div>
+                <!--fim Cadastro Cliente-->
 
+                <!--inicio Cadastro Responsável Técnico(RT)-->
                 <div class="content" id="tecnico-rt">
                     <div class="infos">
                         <form method="POST" class="formLogin">
@@ -138,7 +150,9 @@
                         </form>
                     </div>
                 </div>
+                <!--fim Cadastro Responsável Técnico(RT)-->
 
+                <!--inicio Cadastro Executante-->
                 <div class="content" id="executante">
                     <div class="infos">
                         <form method="POST" class="formLogin">
@@ -185,6 +199,88 @@
                         </form>
                     </div>
                 </div>
+                <!--fim Cadastro Executante-->
+
+                <!--inicio Cadastro Ordem de Serviço-->
+                <div class="content" id="ordem-servico">
+                    <div class="infos">
+                        <form method="POST" class="formLogin">
+                            <p>Preencha com seus dados os campo abaixo para 
+                                realizar o cadastro.
+                            </p>
+
+                            <!--Nome-->
+                            <label for="nome">Nome</label>
+                            <input type="text" placeholder="Digite seu nome" 
+                            autofocus="true" />
+
+                            <!--Empresa-->
+                            <label for="empresa">Empresa</label>
+                            <select name="empresa" id="empresa">
+                                <option >Selecione a empresa</option>
+                                <option value="observacao">empresa 1</option>
+                                <option value="observacao">empresa 2</option>
+                                <option value="observacao">empresa 3</option>
+                                <option value="observacao">empresa 4</option>
+                                <option value="observacao">empresa 5</option>
+                            </select>
+
+                            <label for="substacoes">Substações</label>
+                            <input type="text" placeholder="Substações" 
+                            autofocus="true" />
+
+                            <!--Botão Mais substações-->
+                            <button class="btn-plus">+</button>
+                            <span class="frase-add-substacao">Adicionar Substação</span>
+
+                            <!--Check Opções-->
+                            <div>                            
+                                <input type="checkbox"> 
+                                <span>Concorda com os termos de uso?</span>
+                            </div>                       
+
+                            <!--Botão Cadastrar-->
+                            <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
+                    </div>
+                </div>
+                <!--fim Cadastro Ordem de Serviço-->
+
+                <!--inicio Cadastro Equipamentos de Teste-->
+                <div class="content" id="equi-tec">
+                    <div class="infos">
+                        <form method="POST" class="formLogin">
+                            <p>Preencha com seus dados os campo abaixo para 
+                                realizar o cadastro.
+                            </p>
+
+                            <!--Nome Equipamento-->
+                            <label for="nome_equip">Nome Equipamento</label>
+                            <input type="text" placeholder="Digite nome do equipamento" 
+                            autofocus="true" />
+
+                            <!--Marca-->
+                            <label for="marca">Marca</label>
+                            <input type="text" placeholder="Digite marca do equipamento" 
+                            autofocus="true" />
+
+                            <!--Modelo-->
+                            <label for="modelo">Modelo</label>
+                            <input type="text" placeholder="Digite modelo do equipamento" 
+                            autofocus="true" />
+
+                            <!--Check Opções-->
+                            <div>                            
+                                <input type="checkbox"> 
+                                <span>Concorda com os termos de uso?</span>
+                            </div>                       
+
+                            <!--Botão Cadastrar-->
+                            <input type="submit" value="Cadastrar" class="btn" />
+                        </form>
+                    </div>
+                </div>
+                <!--fim Cadastro Equipamentos de Teste-->
             </div>
         </div>
     </main>

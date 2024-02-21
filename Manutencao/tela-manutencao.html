@@ -6,91 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Manutenção</title>
     <link rel="stylesheet" href="./src/css/mantencao.css">
+    <link rel="stylesheet" href="/Equipamentos/estilotabelas.css">
 </head>
 
 <body>
     <main class="container">
         <h1 class="titulo"> MANUTENÇÃO PREVENTIVA SUBESTAÇÃO DE MÉDIA TENSÃO </h1>
 
-        <form action="">
-            <table class="relatorio_contratante_table">
-                <tr>
-                    <td>Empresa</td>
-                    <td colspan="2">
-                        <select name="empresa" id="empresa" required>
-                            <option value="empresa1"> Empresa 1</option>
-                            <option value="empresa2">Empresa 2</option>
-                            <option value="cadastrar_empresa">Cadastrar Empresa</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Executante</td>
-                    <td colspan="2">
-                        <select name="executante" id="executante" required>
-                            <option value="executante1"> Executante 1</option>
-                            <option value="executante2"> Executante 2</option>
-                            <option value="cadastrar_executante">Cadastrar Executante</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Data da Execução</td>
-                    <td>
-                        <input type="date" name="data_execucao" id="data_execucao" required />
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="4" class="thExpansao">
-                        <h3>SUBESTAÇÕES ANALISADAS</h3>
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="4" class="thExpansao">
-                        <h3>Dados da Subestação</h3>
-                    </th>
-                </tr>
-                <tr>
-                    <td>Identificação</td>
-                    <td colspan="2">
-                        <select name="identificao" id="identificao" required>
-                            <option value="subestacao1"> Subestação 1</option>
-                            <option value="subestacao2"> Subestação 2</option>
-                            <option value="informar_subestacao">Informar Subestação</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Localização</td>
-                    <td colspan="2">
-                        <select name="localizacao" id="localizacao" required>
-                            <option value="localizacao1"> Localização 1</option>
-                            <option value="localizacao2"> Localização 2</option>
-                            <option value="informar_localizacao">Informar Localização</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="4" class="thExpansao">
-                        <h3>Equipamentos Analisados</h3>
-                    </th>
-                </tr>
-                <tr>
-                    <td>Equipamento</td>
-                    <td colspan="2">
-                        <select name="" id="equipamento">
-                            <option value="chave_seccionadora"> Chave Seccionadora</option>
-                            <option value="disjuntor"> Disjuntor</option>
-                            <option value="transformador">Transformador</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
+        <form action="" id="form-manutencao">
+            <label for="numero_os">Número da OS:</label>
+            <input type="text" id="numero_os" name="numero_os"><br><br>
 
-            <a href="../Envios/Envio-dados-manutencao-para-rt.html" class="tagA">
-                <button class="btn" type="button">Finalizar</button>
-            </a>
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" disabled><br><br>
+
+            <label for="executante">Executante:</label>
+            <input type="text" id="executante" name="executante" disabled><br><br>
+
+            <label for="data_execucao">Data da Execução:</label>
+            <input type="date" id="data_execucao" name="data_execucao" readonly><br><br>
+
+            <div id="subestacoes">
+                <label for="subestacoes-select">Selecione a subestação:</label>
+                <select id="subestacoes-select" disabled>
+                    <!-- Opções de subestações serão preenchidas dinamicamente -->
+                </select>
+            </div>            
+
+            <button class="btn" type="button" id="iniciar_manutencao" disabled>Iniciar Manutenção</button>
         </form>
     </main>
+
+       <!-- Modal de seleção de equipamento -->
+    <div id="modal-equipamento" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Selecione o equipamento:</p>
+            <select id="equipamentos-select-modal">
+                <!-- Opções de equipamentos serão preenchidas dinamicamente -->
+            </select>
+            <button id="selecionar_equipamento">Selecionar</button>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação de realização de manutenção -->
+    <div id="modal-realizar-manutencao" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Deseja realizar manutenção da subestação selecionada?</p>
+            <button id="btn-sim-realizar-manutencao">Sim</button>
+            <button id="btn-nao-realizar-manutencao">Não</button>
+        </div>
+    </div>
+
+    <script src="script-manutencao.js"></script>
 </body>
 </html>

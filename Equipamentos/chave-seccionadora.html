@@ -5,36 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chave Seccionadora</title>
     <link rel="stylesheet" href="estilotabelas.css">
+    <link rel="stylesheet" href="/Manutencao/src/css/mantencao.css">
 </head>
 <body>
 
-    <header style="background: #4169E1;
-    width: 100%;
-    height: 120px;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    position: relative;
-    ">
-        <div style="width: 50%; padding-left: 5%;">
-            <h1 style="color: white;">SubControl</h1>
-            <p style="color: white;">Energia com Controle, Manutenção com SubControl.</p>
-        </div>
-
-        <div style="display: flex; width: 50%; justify-content: right; align-items: center; padding-right: 8%;">
-            <nav>
-                <a href="Login/login.html">Login</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <h1>ENSAIO DA CHAVE SECCIONADORA</h1>
+    <main class="container">
+        <h1 class="titulo">ENSAIO DA CHAVE SECCIONADORA</h1>
 
     <!-- identificação do equipamento-->
 
     <table border="1">
-
+    
         <!-- Linha 1 -->
         <tr>
             <td colspan="4"><strong>DADOS DA CHAVE SECCIONADORA</strong></td>
@@ -60,7 +41,7 @@
             <td>Corrente Nominal (A):</td>
             <td><input type="text" name="corrente-nominal" id="corrente-nominal"></td>
         </tr>
-        
+    
         <!-- Linha 5-->
         <tr>
             <td>Tag do Equipamento:</td>
@@ -84,93 +65,95 @@
         <tr>
             <td>Verificar ocorrência de arcos elétricos</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="1">
                     <option value="nao-ha">NÃO HÁ</option>
                     <option value="observacao">Observação</option>
                 </select>
             </td>
         </tr>
-         <!-- Linha 4-->
-         <tr>
+        <!-- Linha 4-->
+        <tr>
             <td>Verificar posição da alavanca e trava de segurança</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="2">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select>               
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
         <!-- Linha 5 -->
         <tr>
             <td>Verificar isoladores da seccionadora</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="3">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
         <!-- Linha 6 -->
         <tr>
             <td>Limpar cuidadosamente todo conjunto</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="4">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
         <!-- Linha 7 -->
         <tr>
             <td>Verificar o estado dos contatos; aplicar pasta de cobre</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="5">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
         <!-- Linha 8 -->
         <tr>
             <td>Verificar todo o conjunto mecânico, mola, mancais e etc</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="6">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
         <!-- Linha 9-->
         <tr>
             <td>Verificar conexões</td>
-            <td><select name="" id="">
-                <option value="ok">OK</option>                
-                <option value="observacao">Observação</option>                    
-            </select> </td>
+            <td>
+                <select name="status" data-row="7">
+                    <option value="ok">OK</option>
+                    <option value="observacao">Observação</option>
+                </select>
+            </td>
         </tr>
         <!-- lINHA 10 -->
         <tr>
             <td>Operar abertura e fechamento, e ajustar se necessário</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="8">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
         </tr>
-       
+    
         <!-- Linha 11 -->
         <tr>
             <td>Testes operacionais</td>
             <td>
-                <select name="" id="">
+                <select name="status" data-row="9">
                     <option value="ok">OK</option>
-                    <option value="observacao">Observação</option>                    
-                </select> 
+                    <option value="observacao">Observação</option>
+                </select>
             </td>
-        </tr>    
+        </tr>
     </table><br>
-
+    
     <!-- Resistencia ôhmica de contato -->
     <table border="1" class="td-centralizado">
         <!-- Linha 1-->
@@ -201,20 +184,9 @@
         <tr>
             <td>Equipamento utilizado:</td>
             <td>
-                <select name="equipamento-uti" id="equipamento-uti" required>
-                    <option value="microhmimetro-digital">Microhmímetro Digital</option>
-                    <option value="megometro-digital">Megômetro Digital</option>
-                    <option value="informar-equipamento">Informar Equipamento</option>
-                </select>
+                <input type="text" name="codigo-equipamento" class="codigo-equipamento"
+                    placeholder="Digite o patrimônio do equipamento" required>
             </td>
-            <td>Marca/modelo:</td>
-            <td>
-                <select name="marca-modelo" id="marca-modelo">
-                    <option value="michom-100">MICROHM 100</option>
-                    <option value="dmg-01">DMG 10 Ki</option>
-                    <option value="informar-marca-modelo">Informar marca/modelo</option>   
-                </select>
-            </td>             
         </tr>
     </table><br>
 
@@ -265,68 +237,63 @@
         <!-- Linha 8-->
         <tr>
             <td>Equipamento utilizado:</td>
-            <td>
-                <select name="equipamento-uti" id="equipamento-uti" required>
-                    <option value="microhmimetro-digital">Microhmímetro Digital</option>
-                    <option value="megometro-digital">Megômetro Digital</option>
-                    <option value="informar-equipamento">Informar Equipamento</option>
-                </select>
-            </td>
-            <td>Marca/modelo:</td>
-            <td>
-                <select name="marca-modelo" id="marca-modelo">
-                    <option value="michom-100">MICROHM 100</option>
-                    <option value="dmg-01">DMG 10 Ki</option>
-                    <option value="informar-marca-modelo">Informar marca/modelo</option>   
-                </select>
+            <td colspan="4">
+                <input type="text" name="codigo-equipamento" class="codigo-equipamento" placeholder="Digite o patrimônio do equipamento" required>
             </td>       
         </tr>
     </table>   
     
     <!-- Campo observações-->
     <form action="">
-        <label for="observacoes"><h3>Observações</h3></label>
-        <textarea name="observacoes" id="observacoes" cols="90" rows="10"></textarea>
+        <label for="observacoes"><h3>Observações</h3></label><br>
+        <textarea name="observacoes" id="campo-observacoes" cols="90" rows="10"></textarea>
         <br><br><input type="submit" value="Finalizar Manutenção do Equipamento">
     </form><br>
     </main>
 
-    
+    <!-- Modal de Observações -->
+<div id="modal-observacoes" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Observações:</p>
+        <textarea id="observacao-textarea"></textarea>
+        <button id="btn-salvar-observacao">Salvar</button>
+    </div>
+</div>
 
-    <footer style="background: #ffab62;
-    width: 100%;
-    height: 230px;
-    bottom: 0;
-    left: 0;
-    ">
-        <div style="display: flex; flex-direction: column;">
-            <div style="display: flex; margin-left: 5%;">
-                <div style="display: flex; justify-content: left;  width: 15%; flex-direction: column;">
-                    <h3 style="margin-bottom: 2px; color: white;">Contato</h3>
+    <!-- Modal para confirmar a finalização da manutenção equipamento -->
+<div id="modal-finalizar-manutencao" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Deseja inserir outro equipamento?</p>
+        <button id="btn-sim">Sim</button>
+        <button id="btn-nao">Não</button>
+    </div>
+</div>
 
-                    <h4 style="margin-bottom: 8px; color: white;">Email</h4>
-                    <p style="margin: 0px; color: white;">manutencao@email.com</p>
+<!-- Modal de seleção de equipamento -->
+<div id="modal-equipamento" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Selecione o equipamento:</p>
+        <select id="equipamentos-select-modal">
+            <!-- Opções de equipamentos serão preenchidas dinamicamente -->
+        </select>
+        <button id="selecionar_equipamento">Selecionar</button>
+    </div>
+</div>
 
-                    <h4 style="margin-bottom: 8px; color: white;">Telefone</h4>
-                    <p style="margin: 0px; color: white;">(00) 123456789</p>
-                </div>
-                <div style="display: flex; justify-content: left;  width: 20%; flex-direction: column;">
-                    <h3 style="margin-bottom: 2px; color: white;">Sigam-nos</h3>
-                    <p>
-                        <a style="color: white; text-decoration: none; font-weight: bolder; padding: 10px;" href="#" target="_blank">Instagram</a>
-                        <a style="color: white; text-decoration: none; font-weight: bolder ; padding: 10px;" href="#" target="_blank">Facebook</a>
-                        <a style="color: white; text-decoration: none; font-weight: bolder; padding: 10px;" href="#" target="_blank">Linkedin</a>
-                    </p>
+<!-- Modal para confirmar a continuação da manutenção -->
+<div id="modal-continuar-manutencao" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Deseja realizar a manutenção da próxima subestação?</p>
+        <button id="btn-sim-continuar">Sim</button>
+        <button id="btn-nao-continuar">Não</button>
+    </div>
+</div>
 
+<script src="/Manutencao/script-manutencao.js"></script>
 
-                </div>
-            </div>
-            <div style="display: flex; justify-content: center; align-items: center;">
-                <p style="color: white;"> &copy; SubControl - Energia com controle, manutenção com SubControl 2023</p>
-            </div>
-        </div>
-    </footer>
-
-    
 </body>
 </html>

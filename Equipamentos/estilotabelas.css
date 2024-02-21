@@ -72,3 +72,64 @@ input[type="submit"] {
     display: block; /* Torna o botão um bloco para centralizar */
     margin: 0 auto; /* Centraliza horizontalmente */
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+ }
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+ }
+
+ #equipamentos-select-modal {
+  margin-bottom: 10px; /* Adiciona espaço abaixo da caixa de seleção */
+}
+
+#selecionar_equipamento {
+  margin-top: 10px; /* Adiciona espaço acima do botão "Selecionar" */
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos adicionais para o botão "Iniciar Manutenção" */
+#iniciar_manutencao {
+  background-color: #001F3F;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#iniciar_manutencao:hover {
+  background-color: #87CEEB;
+}

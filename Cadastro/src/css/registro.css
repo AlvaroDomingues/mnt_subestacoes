@@ -27,7 +27,7 @@
   body{
     font-family:var(--fonte0) ;
     color: black;
-    background-color:white ;   
+    background-color:white ;
   }
 
 /*tipo fontes*/
@@ -134,13 +134,12 @@ nav{
   /*fim estilo header*/
 
 #container {
-    /* background-color: var(--cor02); */
-    margin: auto;
+    /* margin: auto; */
+    margin: auto auto 250px auto;
     width: 80%;
     height: 100%;
     padding: 20px;
     border-radius: 8px;
-    /* box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1); */
 }
 
 .tab-buttons {
@@ -237,7 +236,17 @@ nav{
     transition: all linear 160ms;
     outline: none;
   }
-  
+
+  .formLogin select {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+  }  
   
   .formLogin input:focus {
     border: 1px solid var(--cor00);
@@ -274,9 +283,32 @@ nav{
   
   .btn:hover {
     transform: scale(1.05);
-    background-color: var(--cor01);
-  
+    background-color: var(--cor01);  
   }
+
+  .btn-plus {
+    background-color: var(--cor01);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;  
+    width: 50px;
+    height: 30px;
+  }
+
+  .btn-plus:hover {
+    transform: scale(1.05);
+    background-color: var(--cor01);  
+  }
+
+  .frase-add-substacao {
+    font-size: 12px;
+    color: orange;
+  }
+
   /*fim estilo login*/
 
   /*inicio style footer*/
@@ -295,6 +327,9 @@ nav{
   .footer{
     background-color: var(--cor06);
     padding: 70px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   .footer-col{
    width: 25%;
@@ -354,16 +389,18 @@ nav{
     background-color: #ffffff;
   }
   .copyright-footer{
-  display:flex;
-  justify-content: center;
-  align-items: center;
   background-color: #222222;
   padding:20px;
   color:#999999;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
   }
-  .copyright-footer p a{
-  color:#e91e63;
+
+  .copyright-footer p {
+    text-align: center;
   }
+  
   /*responsive*/
   @media(max-width: 767px){
   .footer-col{

@@ -414,3 +414,35 @@ nav{
   }
   }
   /*fim style footer*/
+
+/* Inicio estilo Validação Campos Formulário */
+#email-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#end-error{
+  margin-top: -20px;
+  color: red;
+}
+
+#cnpj-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-error-conf {
+  margin-top: -20px;
+  color: red;
+}
+
+#msg_sucesso {
+  /* background-color: rgb(203, 247, 203);
+  padding: 15px; */
+}
+/* Fim estilo Validação Campos Formulário */

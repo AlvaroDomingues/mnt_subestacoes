@@ -33,7 +33,7 @@
     <main>
         <div id="container">
             <div class="tab-buttons">
-                <button class="tab-btn active" content-id="home">
+                <button class="tab-btn active" content-id="cliente">
                     Cadastro Cliente
                 </button>
 
@@ -57,33 +57,67 @@
             <div class="tab-contents">
 
                 <!--inicio Cadastro Cliente-->
-                <div class="content" id="home">
-                    <div class="infos">
-                        <form method="POST" class="formLogin">
+                <div class="content" id="cliente">
+                    <div class="infos">                       
+
+                        <form class="formLogin" id="formCliente">
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso"></p>
+
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
-                            <!--Email-->
-                            <label for="email">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" 
-                            autofocus="true" />
 
+                            <!--Email-->
+                            
+                            <label for="email_cliente">E-mail</label>
+                            <input type="email" 
+                            name="email_cliente"
+                            id="email_cliente"
+                            placeholder="Digite seu e-mail" 
+                            autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="email-error"></p>
+                            
+                            
                             <!--Endereço-->
-                            <label for="endereco">Endereço</label>
-                            <input type="text" placeholder="Digite seu endereço" autofocus="true" />
+                            <label for="end_cliente">Endereço</label>
+                            <input type="text"
+                                name="end_cliente" 
+                                id="end_cliente" 
+                                placeholder="Digite seu endereço" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="end-error"></p>
 
                             <!--CNPJ-->
-                            <label for="cnpj">CNPJ</label>
-                            <input type="text" placeholder="Digite seu CNPJ" 
-                            autofocus="true" />
+                            <label for="cnpj_cliente">CNPJ</label>
+                            <input type="text" 
+                                name="cnpj_cliente"
+                                id="cnpj_cliente"
+                                placeholder="Digite seu CNPJ" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="cnpj-error"></p>
 
                             <!--Senha-->
-                            <label for="password">Senha</label>
-                            <input type="password" placeholder="Digite sua senha" />
+                            <label for="senha_cliente">Senha</label>
+                            <input type="password" 
+                                placeholder="Digite sua senha" 
+                                name="senha_cliente"
+                                id="senha_cliente"
+                                />
+                            <!--Mensagem error-->
+                            <p id="pass-error"></p>
 
                             <!--Confirmar Senha-->
-                            <label for="password">Insira sua senha novamente</label>
-                            <input type="password" placeholder="Digite sua novamente senha" />
+                            <label for="senha_cliente_conf">Insira sua senha novamente</label>
+                            <input type="password"
+                                name="senha_cliente_conf"
+                                id="senha_cliente_conf"
+                                placeholder="Digite sua novamente senha" />
+                            <!--Mensagem error-->
+                            <p id="pass-error-conf"></p>
 
                             <!--Check Opções-->
                             <div>                            
@@ -92,7 +126,9 @@
                             </div>                       
 
                             <!--Botão Cadastrar-->
-                            <input type="submit" value="Cadastrar" class="btn" />
+                            <input type="submit" 
+                                value="Cadastrar" 
+                                class="btn" />
                         </form>
                     </div>
                 </div>
@@ -255,7 +291,7 @@
                             </p>
 
                             <!--Nome Equipamento-->
-                            <label for="nome_equip">Nome Equipamento</label>
+                            <label for="nome_equip">Patrimônio</label>
                             <input type="text" placeholder="Digite nome do equipamento" 
                             autofocus="true" />
 

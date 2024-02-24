@@ -107,36 +107,36 @@ form_cliente.addEventListener('submit',(e)=>
   dados.push(cnpj_cliente.value)
   dados.push(password_cliente.value)
   dados.push(password_cliente_conf.value)
-  console.log(dados)
- 
+
+  var filtered = dados.filter(function (el) {
+    return el == null;
+  }); 
   
-  // if(dados){    
-  //   msg_sucesso.classList.add('msg_sucesso')
-  //   msg_sucesso.innerText = 'Cadastro realizado com sucesso'
-  //   form_cliente.reset();
-  // }
+  if(filtered > 0){    
+    msg_sucesso.classList.add('msg_sucesso')
+    msg_sucesso.innerText = 'Cadastro realizado com sucesso'
+    form_cliente.reset();
+  }
 });
 /*Fim validação Cadastro Cliente*/
 
 /*Inicio validação Cadastro Responsável Técnico(RT)*/
 //campos
-const form_rt = document.getElementById('formRt');
-const nome_rt = document.getElementById('nome_rt');
-const sobrenome_rt = document.getElementById('sobrenome_rt');
-const email_rt = document.getElementById('email_rt');
-const crea_rt = document.getElementById('crea_rt');
-const cnpj_rt = document.getElementById('cnpj_rt');
-const password_rt = document.getElementById('senha_rt');
-const password_rt_conf = document.getElementById('senha_rt_conf');
+let form_rt = document.getElementById('formRt');
+let nome_rt = document.getElementById('nome_rt');
+let sobrenome_rt = document.getElementById('sobrenome_rt');
+let email_rt = document.getElementById('email_rt');
+let crea_rt = document.getElementById('crea_rt');
+let password_rt = document.getElementById('senha_rt');
+let password_rt_conf = document.getElementById('senha_rt_conf');
 
 //msg_error
-const nome_error_rt = document.getElementById('nome-error');
-const sobrenome_error_rt = document.getElementById('sobrenome-error');
-const email_error_rt = document.getElementById('email-error-rt');
-const crea_error_rt = document.getElementById('crea-error');
-const cnpj_error_rt = document.getElementById('cnpj-error-rt');
-const pass_error_rt = document.getElementById('pass-error-rt');
-const pass_error_conf_rt = document.getElementById('pass-error-conf-rt');
+let nome_error_rt = document.getElementById('nome-error');
+let sobrenome_error_rt = document.getElementById('sobrenome-error');
+let email_error_rt = document.getElementById('email-error-rt');
+let crea_error_rt = document.getElementById('crea-error');
+let pass_error_rt = document.getElementById('pass-error-rt');
+let pass_error_conf_rt = document.getElementById('pass-error-conf-rt');
 
 //msg_sucesso
 let msg_sucesso_rt = document.getElementById('msg_sucesso_rt');
@@ -181,14 +181,6 @@ form_rt.addEventListener('submit',(e)=>
     crea_error_rt.innerText = ""
   }
 
-  //cnpj
-  if(cnpj_rt.value == '' || cnpj_rt.value == null){
-    e.preventDefault();
-    cnpj_error_rt.innerHTML = "CNPJ é obrigatório";
-  }else{
-    cnpj_error_rt.innerHTML = ""
-  }
-
   //digitar senha
   if(password_rt.value.length <= 5){
     e.preventDefault();
@@ -205,26 +197,29 @@ form_rt.addEventListener('submit',(e)=>
     dados_rt.push(nome_rt.value)
   }
 
-  
+  e.preventDefault()    
+
   dados_rt.push(sobrenome_rt.value)
   dados_rt.push(email_rt.value)
   dados_rt.push(crea_rt.value)
-  dados_rt.push(cnpj_rt.value)
   dados_rt.push(password_rt.value)
   dados_rt.push(password_rt_conf.value)
-  console.log(dados_rt)
-  
-  var filtered = dados_rt.filter(function (el) {
-    return el != null;
-  });
+  console.log(dados_rt)  
 
-  console.log(filtered)
-  
-  // if(dados_rt.value != ''){
-   
-  //   msg_sucesso_rt.classList.add('msg_sucesso')
-  //   msg_sucesso_rt.innerText = 'Cadastro realizado com sucesso'
-  //   form_rt.reset();
-  // }
+  let newArry = dados_rt.filter((a) => a && a==null);
+  console.log(newArry)
+
+  let otherArray = dados_rt.filter((a) => a)
+  console.log(otherArray)  
+
+  if(otherArray.length > 0){    
+    msg_sucesso_rt.classList.add('msg_sucesso')
+    msg_sucesso_rt.innerText = 'Cadastro realizado com sucesso'
+    form_rt.reset();
+    dados_rt=[]
+    setTimeout(function() {
+      msg_sucesso_rt.style.display = "none";
+    }, 2000);
+  }
 });
 /*Fim validação Cadastro Responsável Técnico(RT)*/

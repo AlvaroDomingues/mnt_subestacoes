@@ -416,6 +416,13 @@ nav{
   /*fim style footer*/
 
 /* Inicio estilo Validação Campos Formulário */
+/*Mensangem de sucesso*/
+.msg_sucesso {
+  background-color: rgb(203, 247, 203);
+  padding: 15px;
+}
+
+/*Mensagem Error*/
 #email-error {
   margin-top: -20px;
   color: red;
@@ -441,8 +448,40 @@ nav{
   color: red;
 }
 
-#msg_sucesso {
-  /* background-color: rgb(203, 247, 203);
-  padding: 15px; */
+#email-error-rt {
+  margin-top: -20px;
+  color: red;
 }
+
+#nome-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#sobrenome-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#crea-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#cnpj-error-rt {
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-error-rt {
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-error-conf-rt {
+  margin-top: -20px;
+  color: red;
+}
+
+
 /* Fim estilo Validação Campos Formulário */

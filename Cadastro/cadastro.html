@@ -128,7 +128,7 @@
                             <!--Botão Cadastrar-->
                             <input type="submit" 
                                 value="Cadastrar" 
-                                class="btn" />
+                                class="btn"/>
                         </form>
                     </div>
                 </div>
@@ -137,43 +137,81 @@
                 <!--inicio Cadastro Responsável Técnico(RT)-->
                 <div class="content" id="tecnico-rt">
                     <div class="infos">
-                        <form method="POST" class="formLogin">
+                        <form class="formLogin" id="formRt">
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso_rt" ></p>
+
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
 
                             <!--Nome-->
                             <label for="nome">Nome</label>
-                            <input type="text" placeholder="Digite seu nome" 
-                            autofocus="true" />
+                            <input type="text" 
+                                placeholder="Digite seu nome" 
+                                autofocus="true" 
+                                name="nome_rt"
+                                id="nome_rt"/>
+                            <!--Mensagem error-->
+                            <p id="nome-error"></p>
 
                             <!--Sobrenome-->
                             <label for="sobrenome">Sobrenome</label>
-                            <input type="text" placeholder="Digite seu sobrenome" 
-                            autofocus="true" />
+                            <input type="text" 
+                                placeholder="Digite seu sobrenome" 
+                                autofocus="true" 
+                                name="sobrenome_rt"
+                                id="sobrenome_rt"/>
+                            <!--Mensagem error-->
+                            <p id="sobrenome-error"></p>
 
                             <!--Email-->
                             <label for="email">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" 
-                            autofocus="true" />
+                            <input type="email" 
+                                placeholder="Digite seu e-mail" 
+                                autofocus="true" 
+                                name="email_rt"
+                                id="email_rt"/>
+                            <!--Mensagem error-->
+                            <p id="email-error-rt"></p>
 
                             <!--CREA-->
-                            <label for="crea">CREA</label>
-                            <input type="text" placeholder="Digite o CREA" 
-                            autofocus="true" />
+                            <label for="crea_rt">CREA</label>
+                            <input type="text"                                 
+                                name="crea_rt"
+                                id="crea_rt"
+                                placeholder="Digite o CREA" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="crea-error"></p>
 
                             <!--CNPJ-->
                             <label for="cnpj">CNPJ</label>
-                            <input type="text" placeholder="Digite seu CNPJ" 
-                            autofocus="true" />
+                            <input type="text" 
+                                placeholder="Digite seu CNPJ" 
+                                autofocus="true" 
+                                name="cnpj_rt"
+                                id="cnpj_rt"/>
+                            <!--Mensagem error-->
+                            <p id="cnpj-error-rt"></p>
 
                             <!--Senha-->
                             <label for="password">Senha</label>
-                            <input type="password" placeholder="Digite sua senha" />
+                            <input type="password" 
+                                placeholder="Digite sua senha" 
+                                name="senha_rt"
+                                id="senha_rt"/>
+                            <!--Mensagem error-->
+                            <p id="pass-error-rt"></p>
 
                             <!--Confirmar Senha-->
                             <label for="password">Insira sua senha novamente</label>
-                            <input type="password" placeholder="Digite sua novamente senha" />
+                            <input type="password" 
+                                placeholder="Digite sua novamente senha" 
+                                name="senha_rt_conf"
+                                id="senha_rt_conf"/>
+                            <!--Mensagem error-->
+                            <p id="pass-error-conf-rt"></p>
 
                             <!--Check Opções-->
                             <div>                            

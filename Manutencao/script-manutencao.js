@@ -39,6 +39,12 @@ function selecionarEquipamento() {
     const equipamentosSelect = document.getElementById('equipamentos-select-modal');
     equipamentosSelect.innerHTML = ''; // Limpa o conteúdo anterior
 
+     // Adiciona uma opção vazia
+     const optionVazia = document.createElement('option');
+     optionVazia.value = '';
+     optionVazia.textContent = '';
+     equipamentosSelect.appendChild(optionVazia); 
+
     const equipamentos = ["Chave Seccionadora", "Disjuntor", "Transformador"]; 
     equipamentos.forEach(equipamento => {
         const option = document.createElement('option');
@@ -65,7 +71,7 @@ function selecionarEquipamento() {
         } else if (equipamentoSelecionado === "Transformador") {
             window.location.href = 'pagina_transformador.html';
         } else {
-            // Se nenhum equipamento for selecionado (o que não deve acontecer), exibe um alerta
+            // Se nenhum equipamento for selecionado, exibe um alerta
             showAlert("Por favor, selecione um equipamento.");
         }
     });
@@ -119,6 +125,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const subestacoes = empresa.subestacoes;
                 const subestacoesSelect = document.getElementById('subestacoes-select');
                 subestacoesSelect.innerHTML = ''; // Limpa o conteúdo anterior
+
+                // Adiciona uma opção vazia
+                const optionVazia = document.createElement('option');
+                optionVazia.value = '';
+                optionVazia.textContent = '';
+                subestacoesSelect.appendChild(optionVazia);
 
                 subestacoes.forEach(subestacao => {
                     const option = document.createElement('option');
@@ -181,6 +193,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('btn-nao-realizar-manutencao').addEventListener('click', function() {
         // Fecha o modal de confirmação
         document.getElementById('modal-realizar-manutencao').style.display = "none";
+        //Limpa a seleção do seletor subestação
+        document.getElementById('subestacoes-select').value = '';
     });
 
     // Event listener para fechar o modal se o usuário clicar no botão de fechar (X)
@@ -190,6 +204,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeBtn = modal.getElementsByClassName('close')[0];
         closeBtn.addEventListener('click', function() {
             modal.style.display = "none";
+            // Limpa a seleção do seletor da subestação
+            document.getElementById('subestacoes-select').value = '';
         });
     }
 });

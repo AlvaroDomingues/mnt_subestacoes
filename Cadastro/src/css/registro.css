@@ -423,6 +423,8 @@ nav{
 }
 
 /*Mensagem Error*/
+
+/*inicio msg error cliente*/
 #email-error {
   margin-top: -20px;
   color: red;
@@ -447,7 +449,9 @@ nav{
   margin-top: -20px;
   color: red;
 }
+/*fim msg error cliente*/
 
+/*inicio msg error rt*/
 #email-error-rt {
   margin-top: -20px;
   color: red;
@@ -477,6 +481,72 @@ nav{
   margin-top: -20px;
   color: red;
 }
+/*fim msg error rt*/
 
+/*inicio msg error executante*/
+#nome-exe-error{
+  margin-top: -20px;
+  color: red;
+}
+
+#sobrenome-exe-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#email-exe-error {
+  margin-top: -20px;
+  color: red;
+}
+
+#crea-exe-error{
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-exe-error{
+  margin-top: -20px;
+  color: red;
+}
+
+#pass-conf-exe-error{
+  margin-top: -20px;
+  color: red;
+}
+/*fim msg error executante*/
+
+/*inicio msg error ordem serviço*/
+#num-error-os{
+  margin-top: -20px;
+  color: red;
+}
+
+#empresa-error-os{
+  margin-top: -20px;
+  color: red;
+}
+
+#substacoes-error-os{
+  margin-top: -20px;
+  color: red;
+}
+/*fim msg error ordem serviço*/
+
+/*Inicio msg error equipamentos*/
+#nome-error-eq{
+  margin-top: -20px;
+  color: red;
+}
+
+#marca-error-eq{
+  margin-top: -20px;
+  color: red;
+}
+
+#modelo-error-eq{
+  margin-top: -20px;
+  color: red;
+}
+/*Fim msg error equipamentos*/
 
 /* Fim estilo Validação Campos Formulário */

@@ -23,7 +23,7 @@
     margin: 0px;
     padding: 0px;
   }
-  
+
   body{
     font-family:var(--fonte0) ;
     color: black;
@@ -78,7 +78,7 @@ nav{
   a.active,a:hover{
     color: #d8a13e;
   }
-  
+
   .checkbtn{
     font-size: var(--size30);
     color: #001F3F;
@@ -130,7 +130,7 @@ nav{
       left: 0;
     }
   }
-  
+
   /*fim estilo header*/
 
 #container {
@@ -197,7 +197,7 @@ nav{
     height: 80vh;
     margin: 15px 0px 15px 0px;
   }
-  
+
   .formLogin {
     display: flex;
     flex-direction: column;
@@ -207,25 +207,25 @@ nav{
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.1);
     gap: 5px
   }
-  
+
   .areaLogin img {
     width: 420px;
   }
-  
+
   .formLogin h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
     font-size: 2.3em;
   }
-  
+
   .formLogin p {
     display: inline-block;
     font-size: 14px;
     color: #666;
     margin-bottom: 25px;
   }
-  
+
   .formLogin input {
     padding: 15px;
     font-size: 14px;
@@ -246,17 +246,17 @@ nav{
     border-radius: 4px;
     transition: all linear 160ms;
     outline: none;
-  }  
-  
+  }
+
   .formLogin input:focus {
     border: 1px solid var(--cor00);
   }
-  
+
   .formLogin label {
     font-size: 14px;
     font-weight: 600;
   }
-  
+
   .formLogin a {
     display: inline-block;
     margin-bottom: 20px;
@@ -264,11 +264,11 @@ nav{
     color: #555;
     transition: all linear 160ms;
   }
-  
+
   .formLogin a:hover {
     color: var(--cor01);
   }
-  
+
   .btn {
     background-color: var(--cor01);
     color: #fff;
@@ -278,12 +278,12 @@ nav{
     transition: all linear 160ms;
     cursor: pointer;
     margin: 0 !important;
-  
+
   }
-  
+
   .btn:hover {
     transform: scale(1.05);
-    background-color: var(--cor01);  
+    background-color: var(--cor01);
   }
 
   .btn-plus {
@@ -294,14 +294,14 @@ nav{
     border: none !important;
     transition: all linear 160ms;
     cursor: pointer;
-    margin: 0 !important;  
+    margin: 0 !important;
     width: 50px;
     height: 30px;
   }
 
   .btn-plus:hover {
     transform: scale(1.05);
-    background-color: var(--cor01);  
+    background-color: var(--cor01);
   }
 
   .frase-add-substacao {
@@ -315,6 +315,7 @@ nav{
 .container{
     max-width: 1170px;
     margin: auto;
+    font-size: 12px;
   }
   .row{
   display: flex;
@@ -326,7 +327,7 @@ nav{
   }
   .footer{
     background-color: var(--cor06);
-    padding: 70px 0;
+    padding: 10px 0px 50px 0px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -336,7 +337,6 @@ nav{
    padding: 0 15px;
   }
   .footer-col h4{
-    font-size: 18px;
     color: white;
     text-transform: capitalize;
     margin-bottom: 35px;
@@ -360,7 +360,6 @@ nav{
   color: white;
   }
   .footer-col ul li a{
-    font-size: 16px;
     text-transform: capitalize;
     color: var(--cor02);
     text-decoration: none;
@@ -389,8 +388,10 @@ nav{
     background-color: #ffffff;
   }
   .copyright-footer{
+  margin-top: 20px;
+  font-size: 12px;
   background-color: #222222;
-  padding:20px;
+  padding:10px;
   color:#999999;
   position:fixed;
   bottom: 0;
@@ -400,7 +401,7 @@ nav{
   .copyright-footer p {
     text-align: center;
   }
-  
+
   /*responsive*/
   @media(max-width: 767px){
   .footer-col{

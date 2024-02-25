@@ -180,6 +180,7 @@ nav{
     background-color: var(--cor01);
     border-radius: 0px 0px 8px 8px;
     padding: 16px;
+    font-size: 10px;
 }
 
 .content-img {
@@ -187,7 +188,7 @@ nav{
 }
 
 /*inicio estilo login*/
-.page {
+.page {  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,19 +217,19 @@ nav{
     padding: 0;
     margin: 0;
     font-weight: 500;
-    font-size: 2.3em;
+    /* font-size: 2.3em; */
   }
 
   .formLogin p {
     display: inline-block;
-    font-size: 14px;
+    /* font-size: 14px; */
     color: #666;
     margin-bottom: 25px;
   }
 
   .formLogin input {
     padding: 15px;
-    font-size: 14px;
+    /* font-size: 14px; */
     border: 1px solid #ccc;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -239,7 +240,7 @@ nav{
 
   .formLogin select {
     padding: 15px;
-    font-size: 14px;
+    /* font-size: 14px; */
     border: 1px solid #ccc;
     margin-bottom: 20px;
     margin-top: 5px;
@@ -253,14 +254,14 @@ nav{
   }
 
   .formLogin label {
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: 600;
   }
 
   .formLogin a {
     display: inline-block;
     margin-bottom: 20px;
-    font-size: 13px;
+    /* font-size: 13px; */
     color: #555;
     transition: all linear 160ms;
   }
@@ -272,7 +273,7 @@ nav{
   .btn {
     background-color: var(--cor01);
     color: #fff;
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: 600;
     border: none !important;
     transition: all linear 160ms;

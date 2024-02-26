@@ -54,12 +54,17 @@ form_cliente.addEventListener('submit',(e)=>
   if(!email_cliente.value.match(email_check_cliente)){
     e.preventDefault();
     email_error_cliente.innerText = "Email é obrigatório";
+  }else{
+    e.preventDefault();
+    email_error_cliente.innerText = "";
   }
 
   //endereço
   if(endereco_cliente.value === '' || endereco_cliente.value == null){
       e.preventDefault();
       endereco_error_cliente.innerHTML = "Endereço é obrigatório";
+   }else{
+    endereco_error_cliente.innerHTML = "";
    }
 
   //cnpj
@@ -75,18 +80,27 @@ form_cliente.addEventListener('submit',(e)=>
   }else if(cnpj_cliente.value.length > 14){
     e.preventDefault();
     cnpj_error_cliente.innerHTML = "CNPJ Inválido";
+  }else{
+    e.preventDefault();
+    cnpj_error_cliente.innerHTML = "";
   }
 
   //digitar senha
   if(password_cliente.value.length <= 5){
     e.preventDefault();
     pass_error_cliente.innerHTML = "Senha deve ser maior que 6 caracteres";
+  }else{
+    e.preventDefault();
+    pass_error_cliente.innerHTML = "";
   }
 
   //Confirmar senha
   if(password_cliente === password_cliente_conf && pass_error_conf_cliente.value === '' && pass_error_conf_cliente.value == null){
     e.preventDefault();
     pass_error_conf_cliente.innerHTML = 'Senha divergente'
+  }else{
+    e.preventDefault();
+    pass_error_conf_cliente.innerHTML = ''
   }
 
   dados.push(email_cliente.value)
@@ -97,16 +111,18 @@ form_cliente.addEventListener('submit',(e)=>
 
   let newArryDados = dados.filter((a) => a && a==null);
   let otherArrayDados = dados.filter((a) => a)
+
+  console.log(otherArrayDados)
   
-  if(otherArrayDados.length > 0){    
+  if(otherArrayDados.length == 5){    
     msg_sucesso.classList.add('msg_sucesso')
     msg_sucesso.innerText = 'Cadastro realizado com sucesso'
     form_cliente.reset();
-    dados=[]
     setTimeout(function() {
       msg_sucesso.style.display = "none";
     }, 2000);
   }
+  dados=[]
 });
 /*Fim validação Cadastro Cliente*/
 
@@ -146,6 +162,9 @@ form_rt.addEventListener('submit',(e)=>
   }else if(!isNaN(nome_rt.value)){
     e.preventDefault();
     nome_error_rt.innerHTML = "Digite letras";
+  }else{
+    e.preventDefault();
+    nome_error_rt.innerHTML = "";
   }
 
   //sobrenome
@@ -155,6 +174,9 @@ form_rt.addEventListener('submit',(e)=>
   }else if(!isNaN(sobrenome_rt.value)){
     e.preventDefault();
     sobrenome_error_rt.innerHTML = "Digite letras";
+  }else{
+    e.preventDefault();
+    sobrenome_error_rt.innerHTML = "";
   }
 
   //email
@@ -172,18 +194,27 @@ form_rt.addEventListener('submit',(e)=>
   }else if(crea_rt.value.length < 10){
     e.preventDefault();
     crea_error_rt.innerText = "CREA inválido";
+  }else{
+    e.preventDefault();
+    crea_error_rt.innerText = "";
   }
 
   //digitar senha
   if(password_rt.value.length <= 5){
     e.preventDefault();
     pass_error_rt.innerHTML = "Senha deve ser maior que 6 caracteres";
+  }else{
+    e.preventDefault();
+    pass_error_rt.innerHTML = "";
   }
 
   //Confirmar senha
   if(password_rt === password_rt_conf && password_rt_conf.value === '' && password_rt_conf.value == null){
     e.preventDefault();
     pass_error_conf_rt.innerHTML = 'Senha divergente'
+  }else{
+    e.preventDefault();
+    pass_error_conf_rt.innerHTML = ''
   }
 
   e.preventDefault()    
@@ -197,15 +228,15 @@ form_rt.addEventListener('submit',(e)=>
   let newArry = dados_rt.filter((a) => a && a==null);
   let otherArray = dados_rt.filter((a) => a)
 
-  if(otherArray.length > 0){    
+  if(otherArray.length == 6){    
     msg_sucesso_rt.classList.add('msg_sucesso')
     msg_sucesso_rt.innerText = 'Cadastro realizado com sucesso'
     form_rt.reset();
-    // dados_rt=[]
     setTimeout(function() {
       msg_sucesso_rt.style.display = "none";
     }, 2000);
   }
+    dados_rt=[]
 });
 /*Fim validação Cadastro Responsável Técnico(RT)*/
 
@@ -246,6 +277,9 @@ form_exe.addEventListener('submit',(e)=>
   }else if(!isNaN(nome_exe.value)){
     e.preventDefault();
     nome_error_exe.innerHTML = "Digite Letras";
+  }else{
+    e.preventDefault();
+    nome_error_exe.innerHTML = "";
   }
 
   //sobrenome
@@ -255,6 +289,9 @@ form_exe.addEventListener('submit',(e)=>
   }else if(!isNaN(sobrenome_exe.value)){
     e.preventDefault();
     sobrenome_error_exe.innerHTML = "Digite Letras";
+  }else{
+    e.preventDefault();
+    sobrenome_error_exe.innerHTML = "";
   }
 
   //email
@@ -272,18 +309,27 @@ form_exe.addEventListener('submit',(e)=>
   }else if(crea_exe.value < 10){
     e.preventDefault();
     crea_error_exe.innerText = "CREA inválido";
+  }else{
+    e.preventDefault();
+    crea_error_exe.innerText = "";
   }
 
   //digitar senha
   if(password_exe.value.length <= 5){
     e.preventDefault();
     pass_error_exe.innerHTML = "Senha deve ser maior que 6 caracteres";
+  }else{
+    e.preventDefault();
+    pass_error_exe.innerHTML = "";
   }
 
   //Confirmar senha
   if(password_exe.value === password_conf_exe.value && password_conf_exe.value === '' && password_conf_exe.value == null){
     e.preventDefault();
     pass_error_conf_exe.innerHTML = 'Senha divergente'
+  }else{
+    e.preventDefault();
+    pass_error_conf_exe.innerHTML = ''
   }
 
   e.preventDefault()    
@@ -297,15 +343,15 @@ form_exe.addEventListener('submit',(e)=>
   let newArryExe = dados_exe.filter((a) => a && a==null);
   let otherArrayExe = dados_exe.filter((a) => a)
 
-  if(otherArrayExe.length > 0){    
+  if(otherArrayExe.length == 6){    
     msg_sucesso_exe.classList.add('msg_sucesso')
     msg_sucesso_exe.innerText = 'Cadastro realizado com sucesso'
     form_exe.reset();
-    dados_exe=[]
     setTimeout(function() {
       msg_sucesso_exe.style.display = "none";
     }, 2000);
   }
+  dados_exe=[]
 });
 /*Fim validação Cadastro Executante*/
 
@@ -340,6 +386,9 @@ form_os.addEventListener('submit',(e)=>
   }else if(num_os.value.length < 6){
     e.preventDefault();
     num_error_os.innerHTML = "Número OS inválido";
+  }else{
+    e.preventDefault();
+    num_error_os.innerHTML = "";
   }
 
   //empresa
@@ -368,15 +417,15 @@ form_os.addEventListener('submit',(e)=>
   let newArryOs = dados_os.filter((a) => a && a==null);
   let otherArrayOs = dados_os.filter((a) => a)
 
-  if(otherArrayOs.length > 0){    
+  if(otherArrayOs.length == 3){    
     msg_sucesso_os.classList.add('msg_sucesso')
     msg_sucesso_os.innerText = 'Cadastro realizado com sucesso'
     form_os.reset();
-    dados_os = []
     setTimeout(function() {
       msg_sucesso_os.style.display = "none";
     }, 2000);
   }
+  dados_os = []
 });
 /*Fim validação Cadastro Ordem de Serviço*/
 
@@ -435,14 +484,14 @@ form_eq.addEventListener('submit',(e)=>
   let newArryOs = dados_eq.filter((a) => a && a==null);
   let otherArrayEq = dados_eq.filter((a) => a)
 
-  if(otherArrayEq.length > 0){    
+  if(otherArrayEq.length == 3){    
     msg_sucesso_eq.classList.add('msg_sucesso')
     msg_sucesso_eq.innerText = 'Cadastro realizado com sucesso'
     form_eq.reset();
-    dados_eq = []
     setTimeout(function() {
       msg_sucesso_eq.style.display = "none";
     }, 2000);
   }
+  dados_eq = []
 });
 /*Fim validação Cadastro Equipamento de Teste*/

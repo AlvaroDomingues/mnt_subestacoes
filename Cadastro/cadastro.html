@@ -33,7 +33,7 @@
     <main>
         <div id="container">
             <div class="tab-buttons">
-                <button class="tab-btn active" content-id="home">
+                <button class="tab-btn active" content-id="cliente">
                     Cadastro Cliente
                 </button>
 
@@ -57,42 +57,80 @@
             <div class="tab-contents">
 
                 <!--inicio Cadastro Cliente-->
-                <div class="content" id="home">
-                    <div class="infos">
-                        <form method="POST" class="formLogin">
+                <div class="content" id="cliente">
+                    <div class="infos">                       
+
+                        <form class="formLogin" id="formCliente">
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso"></p>
+
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
-                            <!--Email-->
-                            <label for="email">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" 
-                            autofocus="true" />
 
+                            <!--Email-->
+                            
+                            <label for="email_cliente">E-mail</label>
+                            <input type="email" 
+                            name="email_cliente"
+                            id="email_cliente"
+                            placeholder="Digite o e-mail" 
+                            autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="email-error"></p>
+                            
+                            
                             <!--Endereço-->
-                            <label for="endereco">Endereço</label>
-                            <input type="text" placeholder="Digite seu endereço" autofocus="true" />
+                            <label for="end_cliente">Endereço</label>
+                            <input type="text"
+                                name="end_cliente" 
+                                id="end_cliente" 
+                                placeholder="Digite o endereço" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="end-error"></p>
 
                             <!--CNPJ-->
-                            <label for="cnpj">CNPJ</label>
-                            <input type="text" placeholder="Digite seu CNPJ" 
-                            autofocus="true" />
+                            <label for="cnpj_cliente">CNPJ</label>
+                            <input type="text" 
+                                name="cnpj_cliente"
+                                id="cnpj_cliente"
+                                placeholder="Digite o CNPJ" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="cnpj-error"></p>
 
                             <!--Senha-->
-                            <label for="password">Senha</label>
-                            <input type="password" placeholder="Digite sua senha" />
+                            <label for="senha_cliente">Senha</label>
+                            <input type="password" 
+                                placeholder="Digite uma senha" 
+                                name="senha_cliente"
+                                id="senha_cliente"
+                                />
+                            <!--Mensagem error-->
+                            <p id="pass-error"></p>
 
                             <!--Confirmar Senha-->
-                            <label for="password">Insira sua senha novamente</label>
-                            <input type="password" placeholder="Digite sua novamente senha" />
+                            <label for="senha_cliente_conf">Insira sua senha novamente</label>
+                            <input type="password"
+                                name="senha_cliente_conf"
+                                id="senha_cliente_conf"
+                                placeholder="Digite novamente senha" />
+                            <!--Mensagem error-->
+                            <p id="pass-error-conf"></p>
 
                             <!--Check Opções-->
                             <div>                            
-                                <input type="checkbox"> 
+                                <input type="checkbox" id="termo_cliente"> 
                                 <span>Concorda com os termos de uso?</span>
+                                <br>
+                                <p id="termo-error-cliente"></p>
                             </div>                       
 
                             <!--Botão Cadastrar-->
-                            <input type="submit" value="Cadastrar" class="btn" />
+                            <input type="submit" 
+                                value="Cadastrar" 
+                                class="btn"/>
                         </form>
                     </div>
                 </div>
@@ -101,48 +139,78 @@
                 <!--inicio Cadastro Responsável Técnico(RT)-->
                 <div class="content" id="tecnico-rt">
                     <div class="infos">
-                        <form method="POST" class="formLogin">
+                        <form class="formLogin" id="formRt">
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso_rt" ></p>
+
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
 
                             <!--Nome-->
                             <label for="nome">Nome</label>
-                            <input type="text" placeholder="Digite seu nome" 
-                            autofocus="true" />
+                            <input type="text" 
+                                placeholder="Digite o nome" 
+                                autofocus="true" 
+                                name="nome_rt"
+                                id="nome_rt"/>
+                            <!--Mensagem error-->
+                            <p id="nome-error"></p>
 
                             <!--Sobrenome-->
                             <label for="sobrenome">Sobrenome</label>
-                            <input type="text" placeholder="Digite seu sobrenome" 
-                            autofocus="true" />
+                            <input type="text" 
+                                placeholder="Digite o sobrenome" 
+                                autofocus="true" 
+                                name="sobrenome_rt"
+                                id="sobrenome_rt"/>
+                            <!--Mensagem error-->
+                            <p id="sobrenome-error"></p>
 
                             <!--Email-->
                             <label for="email">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" 
-                            autofocus="true" />
+                            <input type="email" 
+                                placeholder="Digite o e-mail" 
+                                autofocus="true" 
+                                name="email_rt"
+                                id="email_rt"/>
+                            <!--Mensagem error-->
+                            <p id="email-error-rt"></p>
 
                             <!--CREA-->
-                            <label for="crea">CREA</label>
-                            <input type="text" placeholder="Digite o CREA" 
-                            autofocus="true" />
-
-                            <!--CNPJ-->
-                            <label for="cnpj">CNPJ</label>
-                            <input type="text" placeholder="Digite seu CNPJ" 
-                            autofocus="true" />
+                            <label for="crea_rt">CREA</label>
+                            <input type="text"                                 
+                                name="crea_rt"
+                                id="crea_rt"
+                                placeholder="Digite o CREA" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="crea-error"></p>
 
                             <!--Senha-->
                             <label for="password">Senha</label>
-                            <input type="password" placeholder="Digite sua senha" />
+                            <input type="password" 
+                                placeholder="Digite uma senha" 
+                                name="senha_rt"
+                                id="senha_rt"/>
+                            <!--Mensagem error-->
+                            <p id="pass-error-rt"></p>
 
                             <!--Confirmar Senha-->
                             <label for="password">Insira sua senha novamente</label>
-                            <input type="password" placeholder="Digite sua novamente senha" />
+                            <input type="password" 
+                                placeholder="Digite novamente senha" 
+                                name="senha_rt_conf"
+                                id="senha_rt_conf"/>
+                            <!--Mensagem error-->
+                            <p id="pass-error-conf-rt"></p>
 
                             <!--Check Opções-->
                             <div>                            
-                                <input type="checkbox"> 
+                                <input type="checkbox" id="termo_rt"> 
                                 <span>Concorda com os termos de uso?</span>
+                                <br>
+                                <p id="termo-error-rt"></p>
                             </div>                       
 
                             <!--Botão Cadastrar-->
@@ -155,43 +223,77 @@
                 <!--inicio Cadastro Executante-->
                 <div class="content" id="executante">
                     <div class="infos">
-                        <form method="POST" class="formLogin">
+                        <form class="formLogin" id="formExecutante">
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
 
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso_rt" ></p>
+
                             <!--Nome-->
-                            <label for="nome">Nome</label>
-                            <input type="text" placeholder="Digite seu nome" 
-                            autofocus="true" />
+                            <label for="nome_exe">Nome</label>
+                            <input type="text"
+                                name="nome_exe" 
+                                id="nome_exe" 
+                                placeholder="Digite o nome" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="nome-exe-error"></p>
 
                             <!--Sobrenome-->
-                            <label for="sobrenome">Sobrenome</label>
-                            <input type="text" placeholder="Digite seu sobrenome" 
-                            autofocus="true" />
+                            <label for="sobrenome_exe">Sobrenome</label>
+                            <input type="text"
+                                name="sobrenome_exe" 
+                                id="sobrenome_exe" 
+                                placeholder="Digite o sobrenome" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="sobrenome-exe-error"></p>
 
                             <!--Email-->
-                            <label for="email">E-mail</label>
-                            <input type="email" placeholder="Digite seu e-mail" 
-                            autofocus="true" />
+                            <label for="email_exe">E-mail</label>
+                            <input type="email"
+                                name="email_exe" 
+                                id="email_exe" 
+                                placeholder="Digite o e-mail" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="email-exe-error"></p>
 
                             <!--CREA-->
-                            <label for="crea">CREA</label>
-                            <input type="text" placeholder="Digite o CREA" 
-                            autofocus="true" />
+                            <label for="crea_exe">CREA</label>
+                            <input type="text"
+                                name="crea_exe" 
+                                id="crea_exe" 
+                                placeholder="Digite o CREA" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="crea-exe-error"></p>
 
                             <!--Senha-->
-                            <label for="password">Senha</label>
-                            <input type="password" placeholder="Digite sua senha" />
+                            <label for="pass_exe">Senha</label>
+                            <input type="password"
+                                name="pass_exe" 
+                                id="pass_exe" 
+                                placeholder="Digite uma senha" />
+                            <!--Mensagem error-->
+                            <p id="pass-exe-error"></p>
 
                             <!--Confirmar Senha-->
-                            <label for="password">Insira sua senha novamente</label>
-                            <input type="password" placeholder="Digite sua novamente senha" />
-
+                            <label for="pass_conf_exe">Insira sua senha novamente</label>
+                            <input type="password"
+                                name="pass_conf_exe"
+                                id="pass_conf_exe"
+                                placeholder="Digite novamente senha" />
+                            <!--Mensagem error-->
+                            <p id="pass-conf-exe-error"></p>
                             <!--Check Opções-->
                             <div>                            
-                                <input type="checkbox"> 
+                                <input type="checkbox" id="termo_exe"> 
                                 <span>Concorda com os termos de uso?</span>
+                                <br>
+                                <p id="termo-error-exe"></p>
                             </div>                       
 
                             <!--Botão Cadastrar-->
@@ -204,30 +306,45 @@
                 <!--inicio Cadastro Ordem de Serviço-->
                 <div class="content" id="ordem-servico">
                     <div class="infos">
-                        <form method="POST" class="formLogin">
+                        <form class="formLogin" id="formOs">
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
 
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso_os" ></p>
+
                             <!--Nome-->
-                            <label for="nome">Nome</label>
-                            <input type="text" placeholder="Digite seu nome" 
-                            autofocus="true" />
+                            <label for="nome_os">Número OS</label>
+                            <input type="text"
+                                name="num_os"
+                                id="num_os" 
+                                placeholder="Digite o número da OS" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="num-error-os"></p>
 
                             <!--Empresa-->
                             <label for="empresa">Empresa</label>
                             <select name="empresa" id="empresa">
-                                <option >Selecione a empresa</option>
+                                <option value="">Selecione a empresa</option>
                                 <option value="observacao">empresa 1</option>
                                 <option value="observacao">empresa 2</option>
                                 <option value="observacao">empresa 3</option>
                                 <option value="observacao">empresa 4</option>
                                 <option value="observacao">empresa 5</option>
                             </select>
+                            <!--Mensagem error-->
+                            <p id="empresa-error-os"></p>
 
                             <label for="substacoes">Substações</label>
-                            <input type="text" placeholder="Substações" 
-                            autofocus="true" />
+                            <input type="text"
+                                name="substacoes" 
+                                id="substacoes" 
+                                placeholder="Substações" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="substacoes-error-os"></p>
 
                             <!--Botão Mais substações-->
                             <button class="btn-plus">+</button>
@@ -235,8 +352,10 @@
 
                             <!--Check Opções-->
                             <div>                            
-                                <input type="checkbox"> 
+                                <input type="checkbox" id="termo_os"> 
                                 <span>Concorda com os termos de uso?</span>
+                                <br>
+                                <p id="termo-error-os"></p>
                             </div>                       
 
                             <!--Botão Cadastrar-->
@@ -249,30 +368,50 @@
                 <!--inicio Cadastro Equipamentos de Teste-->
                 <div class="content" id="equi-tec">
                     <div class="infos">
-                        <form method="POST" class="formLogin">
+                        <form class="formLogin" id="formEquipamento">
                             <p>Preencha com seus dados os campo abaixo para 
                                 realizar o cadastro.
                             </p>
 
+                            <!--Mensagem de Sucesso-->
+                            <p id="msg_sucesso_eq"></p>
+
                             <!--Nome Equipamento-->
-                            <label for="nome_equip">Nome Equipamento</label>
-                            <input type="text" placeholder="Digite nome do equipamento" 
-                            autofocus="true" />
+                            <label for="nome_equip">Patrimônio</label>
+                            <input type="text"
+                                name="nome_equip" 
+                                id="nome_equip" 
+                                placeholder="Digite nome do equipamento" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="nome-error-eq"></p>
 
                             <!--Marca-->
                             <label for="marca">Marca</label>
-                            <input type="text" placeholder="Digite marca do equipamento" 
-                            autofocus="true" />
+                            <input type="text"
+                                name="marca" 
+                                id="marca" 
+                                placeholder="Digite marca do equipamento" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="marca-error-eq"></p>
 
                             <!--Modelo-->
                             <label for="modelo">Modelo</label>
-                            <input type="text" placeholder="Digite modelo do equipamento" 
-                            autofocus="true" />
+                            <input type="text"
+                                name="modelo"
+                                id="modelo"
+                                placeholder="Digite modelo do equipamento" 
+                                autofocus="true" />
+                            <!--Mensagem error-->
+                            <p id="modelo-error-eq"></p>
 
                             <!--Check Opções-->
                             <div>                            
-                                <input type="checkbox"> 
+                                <input type="checkbox" id="termo_eq"> 
                                 <span>Concorda com os termos de uso?</span>
+                                <br>
+                                <p id="termo-error-eq"></p>
                             </div>                       
 
                             <!--Botão Cadastrar-->
@@ -306,7 +445,6 @@
             </div>
           </div>
         </div>
-
         <div class="copyright-footer">
             <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2024</p>
         </div>

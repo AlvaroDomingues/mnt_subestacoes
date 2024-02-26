@@ -328,3 +328,18 @@ color:#e91e63;
 }
 }
 /*fim style footer*/
+
+.msg_sucesso {
+  background-color: rgb(203, 247, 203);
+  padding: 15px;
+}
+
+#email_error {
+  margin-top: -20px;
+  color: red;
+}
+
+#pass_error {
+  margin-top: -20px;
+  color: red;
+}

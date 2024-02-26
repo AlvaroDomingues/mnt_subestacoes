@@ -34,16 +34,18 @@
 
 <main>
   <div class="page">
-    <form method="POST" class="formLogin">
+    <form method="POST" class="formLogin" id="form_cliente">
         <h1>Login</h1>
-        <p>Digite os seus dados de acesso no campo abaixo.</p>
+        <p id="msg_sucesso">Digite os seus dados de acesso no campo abaixo.</p>
         <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <input id="user_email" type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <p id="email_error"></p>
         <label for="password">Senha</label>
-        <input type="password" placeholder="Digite sua senha" />
+        <input id="user_password" type="password" placeholder="Digite sua senha" />
+        <p id="pass_error"></p>
         <a href="../Cadastro/esqueci_minha_senha.html" target="_blank">Esqueci minha senha</a>
         <a href="../Cadastro/cadastro.html" target="_blank">Cadastrar</a>
-        <input type="submit" value="Acessar" class="btn" />
+        <input id="Acessar" type="submit" value="Acessar" class="btn" />
     </form>
   </div>
 </main>  
@@ -73,6 +75,7 @@
   <div class="copyright-footer">
     <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2024</p>
   </div>
+  <script src="./src/js/login.js"></script>
 </body>
 
 </html>

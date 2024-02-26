@@ -45,7 +45,7 @@
         <!-- Linha 5-->
         <tr>
             <td>Tag do Equipamento:</td>
-            <td colspan="3"><input type="text" name="tag-equipamento" id="tag-equipamento"></td>
+            <td colspan="3"><input type="text" name="tag-equipamento" id="tag-equipamento" placeholder="Digite o código de identificação do equipamento"></td>
         </tr>
     </table><br>
 
@@ -63,7 +63,7 @@
         </tr>
         <!-- Linha 3-->
         <tr>
-            <td>Verificar ocorrência de arcos elétricos</td>
+            <td>1 - Verificar ocorrência de arcos elétricos</td>
             <td>
                 <select name="status" data-row="1">
                     <option value="nao-ha">NÃO HÁ</option>
@@ -73,7 +73,7 @@
         </tr>
         <!-- Linha 4-->
         <tr>
-            <td>Verificar posição da alavanca e trava de segurança</td>
+            <td>2 - Verificar posição da alavanca e trava de segurança</td>
             <td>
                 <select name="status" data-row="2">
                     <option value="ok">OK</option>
@@ -83,7 +83,7 @@
         </tr>
         <!-- Linha 5 -->
         <tr>
-            <td>Verificar isoladores da seccionadora</td>
+            <td>3 - Verificar isoladores da seccionadora</td>
             <td>
                 <select name="status" data-row="3">
                     <option value="ok">OK</option>
@@ -93,7 +93,7 @@
         </tr>
         <!-- Linha 6 -->
         <tr>
-            <td>Limpar cuidadosamente todo conjunto</td>
+            <td>4 - Limpar cuidadosamente todo conjunto</td>
             <td>
                 <select name="status" data-row="4">
                     <option value="ok">OK</option>
@@ -103,7 +103,7 @@
         </tr>
         <!-- Linha 7 -->
         <tr>
-            <td>Verificar o estado dos contatos; aplicar pasta de cobre</td>
+            <td>5 - Verificar o estado dos contatos; aplicar pasta de cobre</td>
             <td>
                 <select name="status" data-row="5">
                     <option value="ok">OK</option>
@@ -113,7 +113,7 @@
         </tr>
         <!-- Linha 8 -->
         <tr>
-            <td>Verificar todo o conjunto mecânico, mola, mancais e etc</td>
+            <td>6 - Verificar todo o conjunto mecânico, mola, mancais e etc</td>
             <td>
                 <select name="status" data-row="6">
                     <option value="ok">OK</option>
@@ -123,7 +123,7 @@
         </tr>
         <!-- Linha 9-->
         <tr>
-            <td>Verificar conexões</td>
+            <td>7 - Verificar conexões</td>
             <td>
                 <select name="status" data-row="7">
                     <option value="ok">OK</option>
@@ -133,7 +133,7 @@
         </tr>
         <!-- lINHA 10 -->
         <tr>
-            <td>Operar abertura e fechamento, e ajustar se necessário</td>
+            <td>8 - Operar abertura e fechamento, e ajustar se necessário</td>
             <td>
                 <select name="status" data-row="8">
                     <option value="ok">OK</option>
@@ -144,7 +144,7 @@
     
         <!-- Linha 11 -->
         <tr>
-            <td>Testes operacionais</td>
+            <td>9 - Testes operacionais</td>
             <td>
                 <select name="status" data-row="9">
                     <option value="ok">OK</option>
@@ -184,8 +184,11 @@
         <tr>
             <td>Equipamento utilizado:</td>
             <td>
-                <input type="text" name="codigo-equipamento" class="codigo-equipamento"
-                    placeholder="Digite o patrimônio do equipamento" required>
+                <select name="codigo-equipamento" id="select-equipamento-1" class="codigo-equipamento">
+                    <option value=""></option>
+                    <!-- Opções de equipamentos serão preenchidas dinamicamente com JavaScript -->
+                </select>
+                <span id="erro-patrimonio-1"></span>
             </td>
         </tr>
     </table><br>
@@ -237,8 +240,12 @@
         <!-- Linha 8-->
         <tr>
             <td>Equipamento utilizado:</td>
-            <td colspan="4">
-                <input type="text" name="codigo-equipamento" class="codigo-equipamento" placeholder="Digite o patrimônio do equipamento" required>
+            <td colspan="4">                
+                <select name="codigo-equipamento" id="select-equipamento-2" class="codigo-equipamento">
+                    <option value=""></option>
+                    <!-- Opções de equipamentos serão preenchidas dinamicamente com JavaScript -->
+                </select>
+                <span id="erro-patrimonio-2"></span>
             </td>       
         </tr>
     </table>   
@@ -246,11 +253,14 @@
     <!-- Campo observações-->
     <form action="">
         <label for="observacoes"><h3>Observações</h3></label><br>
-        <textarea name="observacoes" id="campo-observacoes" cols="90" rows="10"></textarea>
-        <br><br><input type="submit" value="Finalizar Manutenção do Equipamento">
+        <textarea name="observacoes" id="campo-observacoes" cols="90" rows="10"></textarea>        
+        <div class="botoes">
+            <button type="button" id="finalizar-manutencao-seccionadora" >Finalizar Manutenção da Chave Seccionadora</button>
+            <button type="button" id="cancela-manutencao-seccionadora">Cancelar</button>
+        </div>
     </form><br>
     </main>
-
+ 
     <!-- Modal de Observações -->
 <div id="modal-observacoes" class="modal">
     <div class="modal-content">
@@ -258,16 +268,17 @@
         <p>Observações:</p>
         <textarea id="observacao-textarea"></textarea>
         <button id="btn-salvar-observacao">Salvar</button>
+        <button id="btn-cancelar-observacao">Cancelar</button>
     </div>
 </div>
 
     <!-- Modal para confirmar a finalização da manutenção equipamento -->
-<div id="modal-finalizar-manutencao" class="modal">
+<div id="modal-finalizar-manutencao-seccionadora" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <p>Deseja inserir outro equipamento?</p>
-        <button id="btn-sim">Sim</button>
-        <button id="btn-nao">Não</button>
+        <button id="btn-sim-novo-equipo">Sim</button>
+        <button id="btn-nao-finaliza-equipo">Não</button>
     </div>
 </div>
 
@@ -289,13 +300,37 @@
 <div id="modal-continuar-manutencao" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Deseja realizar a manutenção da próxima subestação?</p>
+        <p>Deseja realizar manutenção em uma nova subestação?</p>
         <button id="btn-sim-continuar">Sim</button>
         <button id="btn-nao-continuar">Não</button>
     </div>
 </div>
 
-<script src="/Manutencao/script-manutencao.js"></script>
+<!-- Modal para enviar dados da manutenção para RT -->
+<div id="modal-enviar-dados-rt" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Selecione o Responsável Técnico para envio dos dados da manutenção realizada</p>
+        <select name="codigo-rt" id="select-rt" class="codigo-rt">
+            <option value=""></option>
+            <!-- Opções de equipamentos serão preenchidas dinamicamente com JavaScript -->
+        </select>
+        <span id="erro-rt"></span>
+    </div>
+</div>
+
+<!-- Modal para cancelar o ensaio -->
+<div id="modal-cancelar-ensaio" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Todos os dados serão perdidos, deseja continuar?</p>
+        <button id="btn-sim-cancelar">Sim</button>
+        <button id="btn-nao-cancelar">Não</button>
+    </div>
+</div>
+
+<!-- <script src="/Manutencao/script-manutencao.js"></script> -->
+<script src = "scritp-equipamento.js" ></script>
 
 </body>
 </html>

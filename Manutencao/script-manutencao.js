@@ -23,18 +23,21 @@ let indiceSubestacaoAtual = 0;
 const executanteLogado = "Executante Logado";
 
 // Dados de teste: Equipamento utilizado/marca modelo
-const equipamentos = {
-    "000001": "000001 - Microhmimetro Digital - MICROHM 100",
-    "000002": "000002 - Megometro Digital - DMG 10 Ki",  
+const equipamentosTeste = {
+    "000001": "Microhmimetro Digital - MICROHM 100",
+    "000002": "Megometro Digital - DMG 10 Ki"
 };
+
 
 // Função auxiliar para exibir alertas na tela
 function showAlert(message) {
+    console.log("showAlert foi chamada.")
     alert(message);
 }
 
 // Função para selecionar o equipamento
 function selecionarEquipamento() {
+    console.log("Selecionar equipamento foi chamada.")
     // Adiciona as opções de equipamentos 
     const equipamentosSelect = document.getElementById('equipamentos-select-modal');
     equipamentosSelect.innerHTML = ''; // Limpa o conteúdo anterior
@@ -66,9 +69,9 @@ function selecionarEquipamento() {
             if (equipamentoSelecionado === "Chave Seccionadora") {
                 window.location.href = '../Equipamentos/chave-seccionadora.html';
             } else if (equipamentoSelecionado === "Disjuntor") {
-                window.location.href = 'pagina_disjuntor.html';
+                window.location.href = '';
             } else if (equipamentoSelecionado === "Transformador") {
-                window.location.href = 'pagina_transformador.html';
+                window.location.href = '';
             }
         } else {
             // Se nenhum equipamento for selecionado, exibe uma mensagem de erro
@@ -89,32 +92,34 @@ function exibirErro(idElemento, mensagem) {
 
 // Função para ocultar mensagem de erro
 function ocultarErro(idElemento) {
+    console.log("Ocultar erro foi chamada.")
     document.getElementById(idElemento).style.display = "none";
 }
 
-// Função para verificar se há mais subestações pendentes
-function verificarSubestacoesPendentes() {
-    // Verifica se ainda há subestações pendentes para manutenção
-    if (indiceSubestacaoAtual < subestacoesPendentes.length) {
-        // Exibe o modal de continuação da manutenção
-        document.getElementById('modal-continuar-manutencao').style.display = 'block';
-    } else {
-        // Exibe mensagem informando que todas as manutenções foram concluídas
-        showAlert("Todas as manutenções foram concluídas.");
-    }
-}
+// // Função para verificar se há mais subestações pendentes
+// function verificarSubestacoesPendentes() {
+//     // Verifica se ainda há subestações pendentes para manutenção
+//     if (indiceSubestacaoAtual < subestacoesPendentes.length) {
+//         // Exibe o modal de continuação da manutenção
+//         document.getElementById('modal-continuar-manutencao').style.display = 'block';
+//     } else {
+//         // Exibe mensagem informando que todas as manutenções foram concluídas
+//         showAlert("Todas as manutenções foram concluídas.");
+//     }
+// }
 
 // Variável global para armazenar a subestação selecionada
 
-// Preencher dados da OS
+// Preenchimento dos dados da OS com validação
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("O evento DOMContentLoaded foi acionado."); // Adicionando log para verificar se o evento é acionado corretamente
+    console.log("O evento DOMContentLoaded Tela manutenção foi acionado."); // Adicionando log para verificar se o evento é acionado corretamente
     const numeroOSInput = document.getElementById('numero_os');
     const subestacoesSelect = document.getElementById('subestacoes-select');
     const iniciarManutencaoBtn = document.getElementById('iniciar_manutencao');
     const cancelarBtn = document.getElementById('cancela-inicio-manutencao');
 
-    // Event listener para o botão "Cancelar"
+   
+        // Event listener para o botão "Cancelar"
     cancelarBtn.addEventListener('click', function() {            
         window.location.reload();
     });
@@ -131,6 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Verifica se o número de OS inserido está presente nos dados de OS válidas
         if (numeroOS in osValidas) {
+            console.log("Validando numero da OS."); 
 
             // Bloqueia o campo de OS após uma OS válida ser inserida
             this.disabled = true;
@@ -244,89 +250,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Inicializa o campo de observações no formulário principal
-document.addEventListener('DOMContentLoaded', function() {    
-    let observacoes = '';
-
-    // Event listener para as seleções na tabela
-    const selectsObservacao = document.querySelectorAll('select[name="status"]');
-    selectsObservacao.forEach(select => {
-        select.addEventListener('change', function() {
-            // Verifica se a opção selecionada é "Observação"
-            if (this.value === "observacao") {
-                // Exibe o modal de observações
-                document.getElementById('modal-observacoes').style.display = "block";
-            }
-        });
-    });
-
-    // Event listener para o botão "Salvar" no modal de observações
-    document.getElementById('btn-salvar-observacao').addEventListener('click', function() {
-        // Obtém o valor da observação inserida no modal
-        const observacao = document.getElementById('observacao-textarea').value;
-        // Adiciona a observação à variável de observações
-        observacoes += observacao + '\n';
-        // Atualiza o valor do campo de observações no formulário principal
-        document.getElementById('campo-observacoes').value = observacoes;
-        // Fecha o modal de observações
-        document.getElementById('modal-observacoes').style.display = "none";
-        // Reseta o valor do campo de observações no modal
-        document.getElementById('observacao-textarea').value = '';
-    });
-});
-
-// Event listener para a mudança no campo "Equipamento utilizado"
-document.querySelectorAll('.codigo-equipamento').forEach(input => {
-    input.addEventListener('input', function() {
-        const codigoEquipamento = this.value.trim(); // Obtém o código do equipamento inserido
-        const descricaoEquipamento = equipamentos[codigoEquipamento];
-
-        if (descricaoEquipamento) {
-            // Preenche o campo de código do equipamento com a descrição do equipamento
-            this.value = `${descricaoEquipamento}`;
-        } else {
-            alert("Código de equipamento inválido.");
-            // Limpa o campo de código do equipamento
-            this.value = ''
-        }
-    });
-});
-
-// Finalizar Manutenção do Equipamento
-document.addEventListener('DOMContentLoaded', function() {
-    // Event listener para o botão "Finalizar Manutenção do Equipamento"
-    document.querySelector('input[type="submit"]').addEventListener('click', function(event) {
-        event.preventDefault(); // Impede o envio do formulário
-        
-        // Exibe o modal de confirmação
-        document.getElementById('modal-finalizar-manutencao').style.display = 'block';
-    });
-
-    // Event listener para os cliques nos botões dentro do modal de confirmação
-    document.getElementById('modal-finalizar-manutencao').addEventListener('click', function(event) {
-        if (event.target.id === 'btn-sim') {
-            // Fecha o modal de confirmação
-            document.getElementById('modal-finalizar-manutencao').style.display = 'none';
-            // Chama a função para selecionar o equipamento
-            selecionarEquipamento();
-
-        } else if (event.target.id === 'btn-nao') {
-            // Fecha o modal de confirmação
-            document.getElementById('modal-finalizar-manutencao').style.display = 'none';
-
-            verificarSubestacoesPendentes();
-        }
-    });
-    // Event listener para fechar o modal se o usuário clicar no botão de fechar (X)
-    const modals = document.getElementsByClassName('modal');
-    for (let i = 0; i < modals.length; i++) {
-        const modal = modals[i];
-        const closeBtn = modal.getElementsByClassName('close')[0];
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = "none";
-            // Limpa a seleção do seletor da subestação
-            document.getElementById('subestacoes-select').value = '';
-        });
-    }
-});
 

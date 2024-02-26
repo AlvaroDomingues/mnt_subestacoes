@@ -328,3 +328,15 @@ color:#e91e63;
 }
 }
 /*fim style footer*/
+
+/*Mensangem de sucesso*/
+.msg_sucesso {
+  background-color: rgb(203, 247, 203);
+  padding: 15px;
+}
+
+/*mensagem error tela esqueci minha senha*/
+#ems-error{
+  margin-top: -20px;
+  color: red;
+}

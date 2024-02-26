@@ -25,12 +25,13 @@ tabClicked(currentActiveTab);
 
 /*Inicio validação Cadastro Cliente*/
 //campos
+let form_cliente = document.getElementById('formCliente');
 let email_cliente = document.getElementById('email_cliente');
 let endereco_cliente = document.getElementById('end_cliente');
 let cnpj_cliente = document.getElementById('cnpj_cliente');
 let password_cliente = document.getElementById('senha_cliente');
 let password_cliente_conf = document.getElementById('senha_cliente_conf');
-let form_cliente = document.getElementById('formCliente');
+let termo_cliente = document.getElementById('termo_cliente');
 
 //msg_error
 let email_error_cliente = document.getElementById('email-error');
@@ -38,6 +39,7 @@ let endereco_error_cliente = document.getElementById('end-error');
 let cnpj_error_cliente = document.getElementById('cnpj-error');
 let pass_error_cliente = document.getElementById('pass-error');
 let pass_error_conf_cliente = document.getElementById('pass-error-conf');
+let termo_error = document.getElementById('termo-error-cliente')
 
 //msg_sucesso
 let msg_sucesso = document.getElementById('msg_sucesso');
@@ -103,6 +105,15 @@ form_cliente.addEventListener('submit',(e)=>
     pass_error_conf_cliente.innerHTML = ''
   }
 
+  //Termo
+  if(!termo_cliente.checked){
+    e.preventDefault();
+    termo_error.innerHTML = 'Campo obrigatório'
+  }else{
+    e.preventDefault();
+    termo_error.innerHTML = ''
+  }
+
   dados.push(email_cliente.value)
   dados.push(endereco_cliente.value)
   dados.push(cnpj_cliente.value)
@@ -135,6 +146,7 @@ let email_rt = document.getElementById('email_rt');
 let crea_rt = document.getElementById('crea_rt');
 let password_rt = document.getElementById('senha_rt');
 let password_rt_conf = document.getElementById('senha_rt_conf');
+let termo_rt = document.getElementById('termo_rt');
 
 //msg_error
 let nome_error_rt = document.getElementById('nome-error');
@@ -143,6 +155,7 @@ let email_error_rt = document.getElementById('email-error-rt');
 let crea_error_rt = document.getElementById('crea-error');
 let pass_error_rt = document.getElementById('pass-error-rt');
 let pass_error_conf_rt = document.getElementById('pass-error-conf-rt');
+let termo_error_rt = document.getElementById('termo-error-rt')
 
 //msg_sucesso
 let msg_sucesso_rt = document.getElementById('msg_sucesso_rt');
@@ -217,6 +230,15 @@ form_rt.addEventListener('submit',(e)=>
     pass_error_conf_rt.innerHTML = ''
   }
 
+  //Termo
+  if(!termo_rt.checked){
+    e.preventDefault();
+    termo_error_rt.innerHTML = 'Campo obrigatório'
+  }else{
+    e.preventDefault();
+    termo_error_rt.innerHTML = ''
+  }
+
   e.preventDefault()    
 
   dados_rt.push(sobrenome_rt.value)
@@ -250,6 +272,7 @@ let email_exe = document.getElementById('email_exe');
 let crea_exe = document.getElementById('crea_exe');
 let password_exe = document.getElementById('pass_exe');
 let password_conf_exe = document.getElementById('pass_conf_exe');
+let termo_exe = document.getElementById('termo_exe');
 
 //msg_error
 let nome_error_exe = document.getElementById('nome-exe-error');
@@ -258,6 +281,7 @@ let email_error_exe = document.getElementById('email-exe-error');
 let crea_error_exe = document.getElementById('crea-exe-error');
 let pass_error_exe = document.getElementById('pass-exe-error');
 let pass_error_conf_exe = document.getElementById('pass-conf-exe-error');
+let termo_error_exe = document.getElementById('termo-error-exe')
 
 //msg_sucesso
 let msg_sucesso_exe = document.getElementById('msg_sucesso_rt');
@@ -332,6 +356,14 @@ form_exe.addEventListener('submit',(e)=>
     pass_error_conf_exe.innerHTML = ''
   }
 
+  if(!termo_exe.checked){
+    e.preventDefault();
+    termo_error.innerText = 'Campo obrigatório'
+  }else{
+    e.preventDefault();
+    termo_error.innerText = ''
+  }
+
   e.preventDefault()    
 
   dados_exe.push(sobrenome_exe.value)
@@ -361,11 +393,13 @@ let form_os = document.getElementById('formOs');
 let num_os = document.getElementById('num_os');
 let empresa_os = document.getElementById('empresa');
 let substacoes_os = document.getElementById('substacoes');
+let termo_os = document.getElementById('termo_os')
 
 //msg_error
 let num_error_os = document.getElementById('num-error-os');
 let empresa_error_os = document.getElementById('empresa-error-os');
 let substacoes_error_os = document.getElementById('substacoes-error-os');
+let termo_error_os = document.getElementById('termo-error-os')
 
 //msg_sucesso
 let msg_sucesso_os = document.getElementById('msg_sucesso_os');
@@ -407,6 +441,14 @@ form_os.addEventListener('submit',(e)=>
     substacoes_error_os.innerText = ""
   }
 
+  if(!termo_os.checked){
+    e.preventDefault();
+    termo_error_os.innerText = 'Campo obrigatório'
+  }else{
+    e.preventDefault();
+    termo_error_os.innerText = ''
+  }
+
   e.preventDefault()    
 
   dados_os.push(num_os.value)
@@ -435,11 +477,13 @@ let form_eq = document.getElementById('formEquipamento');
 let patrimonio = document.getElementById('nome_equip');
 let marca = document.getElementById('marca');
 let modelo = document.getElementById('modelo');
+let termo_eq = document.getElementById('termo_eq')
 
 //msg_error
 let patrimonio_error_eq = document.getElementById('nome-error-eq');
 let marca_error_eq = document.getElementById('marca-error-eq');
 let modelo_error_eq = document.getElementById('modelo-error-eq');
+let termo_error_eq = document.getElementById('termo-error-eq')
 
 //msg_sucesso
 let msg_sucesso_eq = document.getElementById('msg_sucesso_eq');
@@ -472,6 +516,14 @@ form_eq.addEventListener('submit',(e)=>
     modelo_error_eq.innerText = "Modelo é obrigatório";
   }else{
     modelo_error_eq.innerText = ""
+  }
+
+  if(!termo_eq.checked){
+    e.preventDefault();
+    termo_error_eq.innerText = 'Campo obrigatório'
+  }else{
+    e.preventDefault();
+    termo_error_eq.innerText = ''
   }
 
   e.preventDefault()    

@@ -451,6 +451,10 @@ nav{
   margin-top: -20px;
   color: red;
 }
+#termo-error-cliente {
+  margin-top: -20px;
+  color: red;
+}
 /*fim msg error cliente*/
 
 /*inicio msg error rt*/
@@ -480,6 +484,11 @@ nav{
 }
 
 #pass-error-conf-rt {
+  margin-top: -20px;
+  color: red;
+}
+
+#termo-error-rt{
   margin-top: -20px;
   color: red;
 }
@@ -515,6 +524,11 @@ nav{
   margin-top: -20px;
   color: red;
 }
+
+#termo-error-exe{
+  margin-top: -20px;
+  color: red;
+}
 /*fim msg error executante*/
 
 /*inicio msg error ordem serviço*/
@@ -532,6 +546,11 @@ nav{
   margin-top: -20px;
   color: red;
 }
+
+#termo-error-os {
+  margin-top: -20px;
+  color: red;
+}
 /*fim msg error ordem serviço*/
 
 /*Inicio msg error equipamentos*/
@@ -546,6 +565,11 @@ nav{
 }
 
 #modelo-error-eq{
+  margin-top: -20px;
+  color: red;
+}
+
+#termo-error-eq {
   margin-top: -20px;
   color: red;
 }

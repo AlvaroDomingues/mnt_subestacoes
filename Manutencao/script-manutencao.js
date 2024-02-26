@@ -39,6 +39,12 @@ function selecionarEquipamento() {
     const equipamentosSelect = document.getElementById('equipamentos-select-modal');
     equipamentosSelect.innerHTML = ''; // Limpa o conteúdo anterior
 
+    // Adiciona uma opção vazia
+    const optionVazia = document.createElement('option');
+    optionVazia.value = '';
+    optionVazia.textContent = '';
+    equipamentosSelect.appendChild(optionVazia); 
+
     const equipamentos = ["Chave Seccionadora", "Disjuntor", "Transformador"]; 
     equipamentos.forEach(equipamento => {
         const option = document.createElement('option');
@@ -51,24 +57,39 @@ function selecionarEquipamento() {
 
     // Event listener para o botão "Selecionar" do modal de seleção de equipamento
     document.getElementById('selecionar_equipamento').addEventListener('click', function() {
-        // Fecha o modal de seleção de equipamento
-        document.getElementById('modal-equipamento').style.display = "none";
-
         // Obtém o equipamento selecionado
         const equipamentoSelecionado = document.getElementById('equipamentos-select-modal').value;
 
-        // Redireciona o usuário para a página correspondente ao equipamento selecionado
-        if (equipamentoSelecionado === "Chave Seccionadora") {
-            window.location.href = '../Equipamentos/chave-seccionadora.html';
-        } else if (equipamentoSelecionado === "Disjuntor") {
-            window.location.href = 'pagina_disjuntor.html';
-        } else if (equipamentoSelecionado === "Transformador") {
-            window.location.href = 'pagina_transformador.html';
+        // Verifica se um equipamento foi selecionado
+        if (equipamentoSelecionado) {
+            // Redireciona o usuário para a página correspondente ao equipamento selecionado
+            if (equipamentoSelecionado === "Chave Seccionadora") {
+                window.location.href = '../Equipamentos/chave-seccionadora.html';
+            } else if (equipamentoSelecionado === "Disjuntor") {
+                window.location.href = 'pagina_disjuntor.html';
+            } else if (equipamentoSelecionado === "Transformador") {
+                window.location.href = 'pagina_transformador.html';
+            }
         } else {
-            // Se nenhum equipamento for selecionado (o que não deve acontecer), exibe um alerta
-            showAlert("Por favor, selecione um equipamento.");
+            // Se nenhum equipamento for selecionado, exibe uma mensagem de erro
+            const mensagemErro = document.getElementById('erro-selecao-equipamento');
+            mensagemErro.textContent = "Por favor, selecione um equipamento.";
+            mensagemErro.style.display = "block";
         }
     });
+}
+
+// Função para exibir mensagem de erro
+function exibirErro(idElemento, mensagem) {
+    console.log("Exibir erro foi chamada.");
+    const elementoErro = document.getElementById(idElemento);
+    elementoErro.textContent = mensagem;
+    elementoErro.style.display = "block";
+}
+
+// Função para ocultar mensagem de erro
+function ocultarErro(idElemento) {
+    document.getElementById(idElemento).style.display = "none";
 }
 
 // Função para verificar se há mais subestações pendentes
@@ -84,16 +105,36 @@ function verificarSubestacoesPendentes() {
 }
 
 // Variável global para armazenar a subestação selecionada
-let subestacaoSelecionada = "";
 
-//Preenchimento dos dados de acordo com a OS até a seleção do equipamento
+// Preencher dados da OS
 document.addEventListener('DOMContentLoaded', function() {
-    // Função para preencher os dados da OS com base no número da OS inserido
-    document.getElementById('numero_os').addEventListener('change', function() {
-        const numeroOS = this.value; // Obtém o número de OS inserido pelo usuário
+    console.log("O evento DOMContentLoaded foi acionado."); // Adicionando log para verificar se o evento é acionado corretamente
+    const numeroOSInput = document.getElementById('numero_os');
+    const subestacoesSelect = document.getElementById('subestacoes-select');
+    const iniciarManutencaoBtn = document.getElementById('iniciar_manutencao');
+    const cancelarBtn = document.getElementById('cancela-inicio-manutencao');
+
+    // Event listener para o botão "Cancelar"
+    cancelarBtn.addEventListener('click', function() {            
+        window.location.reload();
+    });
+
+    // Event listener para a mudança no campo de OS
+    numeroOSInput.addEventListener('change', function() {
+        console.log("Numero de OS inserido.");
+        const numeroOS = this.value.trim(); // Obtém o número de OS inserido pelo usuário
+        if (!numeroOS) {
+            // Exibe mensagem solicitando que o usuário insira um número de OS
+            exibirErro('erro-os', "Digite o número da ordem de serviço.");
+            return;
+        }
 
         // Verifica se o número de OS inserido está presente nos dados de OS válidas
         if (numeroOS in osValidas) {
+
+            // Bloqueia o campo de OS após uma OS válida ser inserida
+            this.disabled = true;
+
             const idEmpresa = osValidas[numeroOS]; // Obtém o ID da empresa associada à OS
 
             // Verifica se o ID da empresa está presente nos dados das empresas
@@ -110,17 +151,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const dataAtual = new Date().toISOString().split('T')[0];
                 document.getElementById('data_execucao').value = dataAtual;
 
-                // Habilita os campos de empresa, executante e data de execução
-                document.getElementById('empresa').disabled = false;
-                document.getElementById('executante').disabled = false;
-                document.getElementById('data_execucao').disabled = false;
-
                 // Preenche as opções de subestações com base nos dados das subestações da empresa
-                const subestacoes = empresa.subestacoes;
-                const subestacoesSelect = document.getElementById('subestacoes-select');
                 subestacoesSelect.innerHTML = ''; // Limpa o conteúdo anterior
 
-                subestacoes.forEach(subestacao => {
+                // Adiciona uma opção vazia
+                const optionVazia = document.createElement('option');
+                optionVazia.value = '';
+                optionVazia.textContent = '';
+                subestacoesSelect.appendChild(optionVazia);
+
+                empresa.subestacoes.forEach(subestacao => {
                     const option = document.createElement('option');
                     option.value = subestacao;
                     option.textContent = subestacao;
@@ -130,30 +170,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Habilita o campo de seleção de subestação
                 subestacoesSelect.disabled = false;
 
-                // Event listener para o campo de seleção de subestação
-                document.getElementById('subestacoes-select').addEventListener('change', function() {
-                // Atualiza a variável subestacaoSelecionada com o valor selecionado pelo usuário
-                    subestacaoSelecionada = this.value;
-            });
-
                 // Habilita o botão "Iniciar Manutenção"
-                document.getElementById('iniciar_manutencao').disabled = false;
+                iniciarManutencaoBtn.disabled = false;
+
+                // Oculta a mensagem de erro, se estiver sendo exibida
+                ocultarErro('erro-os');
             } else {
-                // Se o ID da empresa não for encontrado nos dados das empresas, exibe um alerta
-                showAlert("Empresa não encontrada para este número de OS.");
+                // Exibe mensagem de erro
+                exibirErro('erro-os', "Empresa não encontrada para este número de OS.");
             }
         } else {
-            // Se o número de OS não for encontrado nos dados de OS válidas, exibe um alerta
-            showAlert("Número da OS inválido.");
+            // Exibe mensagem de erro
+            exibirErro('erro-os', "Número da OS inválido.");
+        }
+    });
+    
+    // Event listener para a mudança no campo de seleção de subestação
+    subestacoesSelect.addEventListener('change', function() {
+        // Verifica se uma subestação foi selecionada
+        if (this.value.trim() !== '') {
+            // Oculta a mensagem de erro, se estiver sendo exibida
+            ocultarErro('erro-subestacao');
         }
     });
 
     // Event listener para o botão "Iniciar Manutenção"
-    document.getElementById('iniciar_manutencao').addEventListener('click', function() {
+    iniciarManutencaoBtn.addEventListener('click', function() {
         // Verifica se uma subestação foi selecionada
-        const subestacaoSelecionada = document.getElementById('subestacoes-select').value;
+        const subestacaoSelecionada = subestacoesSelect.value;
         if (!subestacaoSelecionada) {
-            showAlert("Por favor, selecione uma subestação antes de iniciar a manutenção.");
+            exibirErro('erro-subestacao', "Por favor, selecione uma subestação antes de iniciar a manutenção.");
             return;
         }
 
@@ -167,20 +213,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('modal-realizar-manutencao').style.display = "none";
 
         // Verifica se uma subestação foi selecionada
-        const subestacaoSelecionada = document.getElementById('subestacoes-select').value;
+        const subestacaoSelecionada = subestacoesSelect.value;
         if (!subestacaoSelecionada) {
-            showAlert("Por favor, selecione uma subestação antes de iniciar a manutenção.");
+            exibirErro('erro-subestacao', "Por favor, selecione uma subestação antes de iniciar a manutenção.");
             return;
         }
+
         // Chama a função para selecionar o equipamento
         selecionarEquipamento();
-
     });
 
     // Event listener para o botão "Não" do modal de confirmação
     document.getElementById('btn-nao-realizar-manutencao').addEventListener('click', function() {
         // Fecha o modal de confirmação
         document.getElementById('modal-realizar-manutencao').style.display = "none";
+        // Limpa a seleção do seletor subestação
+        subestacoesSelect.value = '';
     });
 
     // Event listener para fechar o modal se o usuário clicar no botão de fechar (X)
@@ -190,6 +238,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const closeBtn = modal.getElementsByClassName('close')[0];
         closeBtn.addEventListener('click', function() {
             modal.style.display = "none";
+            // Limpa a seleção do seletor da subestação
+            document.getElementById('subestacoes-select').value = '';
         });
     }
 });
@@ -267,4 +317,16 @@ document.addEventListener('DOMContentLoaded', function() {
             verificarSubestacoesPendentes();
         }
     });
+    // Event listener para fechar o modal se o usuário clicar no botão de fechar (X)
+    const modals = document.getElementsByClassName('modal');
+    for (let i = 0; i < modals.length; i++) {
+        const modal = modals[i];
+        const closeBtn = modal.getElementsByClassName('close')[0];
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = "none";
+            // Limpa a seleção do seletor da subestação
+            document.getElementById('subestacoes-select').value = '';
+        });
+    }
 });
+

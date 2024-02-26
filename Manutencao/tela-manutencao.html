@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Manutenção</title>
-    <link rel="stylesheet" href="./src/css/mantencao.css">
+    <title>Tela Manutenção</title>    
     <link rel="stylesheet" href="/Equipamentos/estilotabelas.css">
+    <link rel="stylesheet" href="./src/css/mantencao.css">
 </head>
 
 <body>
@@ -15,7 +15,9 @@
 
         <form action="" id="form-manutencao">
             <label for="numero_os">Número da OS:</label>
-            <input type="text" id="numero_os" name="numero_os"><br><br>
+            <input type="text" id="numero_os" name="numero_os" placeholder="Digite o número da ordem de serviço"><br><br>
+            <!-- Mensagem de erro-->
+            <span id="erro-os"></span>
 
             <label for="empresa">Empresa:</label>
             <input type="text" id="empresa" name="empresa" disabled><br><br>
@@ -31,9 +33,15 @@
                 <select id="subestacoes-select" disabled>
                     <!-- Opções de subestações serão preenchidas dinamicamente -->
                 </select>
+                <!-- Mensagem de erro-->
+                <span id="erro-subestacao"></span>
             </div>            
 
-            <button class="btn" type="button" id="iniciar_manutencao" disabled>Iniciar Manutenção</button>
+           <div class="botoes">
+                <button type="button" id="iniciar_manutencao" disabled>Iniciar Manutenção</button>
+                <button type="button" id="cancela-inicio-manutencao">Cancelar</button>
+           </div>
+
         </form>
     </main>
 
@@ -44,8 +52,10 @@
             <p>Selecione o equipamento:</p>
             <select id="equipamentos-select-modal">
                 <!-- Opções de equipamentos serão preenchidas dinamicamente -->
-            </select>
+            </select>            
             <button id="selecionar_equipamento">Selecionar</button>
+            <span id="erro-selecao-equipamento"></span>
+            
         </div>
     </div>
 

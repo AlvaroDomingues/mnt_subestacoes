@@ -66,6 +66,15 @@ form_cliente.addEventListener('submit',(e)=>
   if(cnpj_cliente.value == '' || cnpj_cliente.value == null){
     e.preventDefault();
     cnpj_error_cliente.innerHTML = "CNPJ é obrigatório";
+  }else if(isNaN(cnpj_cliente.value)){
+    e.preventDefault();
+    cnpj_error_cliente.innerHTML = "Digite valor númerico para CNPJ";
+  }else if(cnpj_cliente.value.length < 14){
+    e.preventDefault();
+    cnpj_error_cliente.innerHTML = "CNPJ Inválido";
+  }else if(cnpj_cliente.value.length > 14){
+    e.preventDefault();
+    cnpj_error_cliente.innerHTML = "CNPJ Inválido";
   }
 
   //digitar senha
@@ -134,16 +143,18 @@ form_rt.addEventListener('submit',(e)=>
   if(nome_rt.value === '' || nome_rt.value == null){
     e.preventDefault();
     nome_error_rt.innerHTML = "Nome é obrigatório";
-  }else{
-    nome_error_rt.innerHTML = ""
+  }else if(!isNaN(nome_rt.value)){
+    e.preventDefault();
+    nome_error_rt.innerHTML = "Digite letras";
   }
 
   //sobrenome
   if(sobrenome_rt.value === '' || sobrenome_rt.value == null){
     e.preventDefault();
     sobrenome_error_rt.innerHTML = "Sobrenome é obrigatório";
-  }else{
-    sobrenome_error_rt.innerHTML = ""
+  }else if(!isNaN(sobrenome_rt.value)){
+    e.preventDefault();
+    sobrenome_error_rt.innerHTML = "Digite letras";
   }
 
   //email
@@ -158,8 +169,9 @@ form_rt.addEventListener('submit',(e)=>
   if(crea_rt.value === '' || crea_rt.value == null){
     e.preventDefault();
     crea_error_rt.innerText = "CREA é obrigatório";
-  }else{
-    crea_error_rt.innerText = ""
+  }else if(crea_rt.value.length < 10){
+    e.preventDefault();
+    crea_error_rt.innerText = "CREA inválido";
   }
 
   //digitar senha
@@ -189,7 +201,7 @@ form_rt.addEventListener('submit',(e)=>
     msg_sucesso_rt.classList.add('msg_sucesso')
     msg_sucesso_rt.innerText = 'Cadastro realizado com sucesso'
     form_rt.reset();
-    dados_rt=[]
+    // dados_rt=[]
     setTimeout(function() {
       msg_sucesso_rt.style.display = "none";
     }, 2000);
@@ -231,16 +243,18 @@ form_exe.addEventListener('submit',(e)=>
   if(nome_exe.value === '' || nome_exe.value == null){
     e.preventDefault();
     nome_error_exe.innerHTML = "Nome é obrigatório";
-  }else{
-    nome_error_exe.innerHTML = ""
+  }else if(!isNaN(nome_exe.value)){
+    e.preventDefault();
+    nome_error_exe.innerHTML = "Digite Letras";
   }
 
   //sobrenome
   if(sobrenome_exe.value === '' || sobrenome_exe.value == null){
     e.preventDefault();
     sobrenome_error_exe.innerHTML = "Sobrenome é obrigatório";
-  }else{
-    sobrenome_error_exe.innerHTML = ""
+  }else if(!isNaN(sobrenome_exe.value)){
+    e.preventDefault();
+    sobrenome_error_exe.innerHTML = "Digite Letras";
   }
 
   //email
@@ -255,8 +269,9 @@ form_exe.addEventListener('submit',(e)=>
   if(crea_exe.value === '' || crea_exe.value == null){
     e.preventDefault();
     crea_error_exe.innerText = "CREA é obrigatório";
-  }else{
-    crea_error_exe.innerText = ""
+  }else if(crea_exe.value < 10){
+    e.preventDefault();
+    crea_error_exe.innerText = "CREA inválido";
   }
 
   //digitar senha
@@ -319,8 +334,12 @@ form_os.addEventListener('submit',(e)=>
   if(num_os.value === '' || num_os.value == null){
     e.preventDefault();
     num_error_os.innerHTML = "Número é obrigatório";
-  }else{
-    num_error_os.innerHTML = ""
+  }else if(isNaN(num_os.value)){
+    e.preventDefault();
+    num_error_os.innerHTML = "Digite valor númerico para número OS";
+  }else if(num_os.value.length < 6){
+    e.preventDefault();
+    num_error_os.innerHTML = "Número OS inválido";
   }
 
   //empresa

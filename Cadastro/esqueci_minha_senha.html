@@ -34,11 +34,21 @@
 
 <main>
   <div class="page">
-    <form method="POST" class="formLogin">
+    <form class="formLogin" id="formEms">
+        <!--Mensagem de Sucesso-->
+        <p id="msg_sucesso_ems"></p>
+
         <h1>Esqueceu a senha?</h1>
         <p>Digite seu e-mail cadastrado para redefinir sua senha</p>
-        <label for="email">E-mail</label>
-        <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+        <label for="email_ems">E-mail</label>
+        <input type="email"
+          name="email_ems"
+          id="email_ems"
+          placeholder="Digite seu e-mail" 
+          autofocus="true" />
+        <!--Mensagem de error-->
+        <p id="ems-error"></p>
+
         <input type="submit" value="Acessar" class="btn" />
     </form>
   </div>
@@ -69,6 +79,8 @@
   <div class="copyright-footer">
     <p>&copy; SubControl - Energia com controle, manutenção com SubControl 2024</p>
   </div>
+
+  <script src="./src/js/esqueci_a_senha.js"></script>
 </body>
 
 </html>

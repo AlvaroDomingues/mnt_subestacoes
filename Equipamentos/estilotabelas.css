@@ -115,8 +115,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* Estilos adicionais para o botão "Iniciar Manutenção" e cancelar inicio da manutenção */
-#iniciar_manutencao{
+/* Estilo Padrão para os botões iniciar/finalizar */
+
+#iniciar_manutencao,
+#finalizar-manutencao-seccionadora{
   background-color: #001F3F;
   border: none;
   color: white;
@@ -131,7 +133,9 @@ input[type="submit"] {
   margin-right: 10px; 
 }
 
-#cancela-inicio-manutencao {
+/* Estilo Padrão para os botões cancelar */
+#cancela-inicio-manutencao,
+#cancela-manutencao-seccionadora {
   background-color: rgb(238, 234, 234);
   border: none;
   color: black;
@@ -145,21 +149,38 @@ input[type="submit"] {
   border-radius: 5px;
   margin-right: 10px; 
 }
-/* #iniciar_manutencao:hover {
-  background-color: white;
+
+/*Estilo para ação ao passar o mouse* botões iniciar/finalizar*/
+
+#iniciar_manutencao:hover {
+  background-color: whitesmoke;
   color: #001F3F;
-} */
+}
+
+#finalizar-manutencao-seccionadora:hover {
+  background-color: whitesmoke;
+  color: #001F3F;
+}
+
+/*Estilo para ação ao passar o mouse* botões cancelar*/
 
 #cancela-inicio-manutencao:hover {
   background-color: #001F3F;
   color: whitesmoke;
 }
 
-.botoes{
-  display: inline-block;
+#cancela-manutencao-seccionadora:hover{
+  background-color: #001F3F;
+  color: whitesmoke;
 }
 
-/*Estilo especial para o botão manutenção enquanto estiver desabilitado*/
+/* Padrão de posicionamento botões*/
+.botoes{
+  display: flex;
+  justify-content: center; 
+}
+
+/*Estilo especial para o botão Iniciar Manutenção enquanto estiver desabilitado*/
 
 #iniciar_manutencao[disabled]:hover {
   cursor: not-allowed; /* Muda o cursor para indicar que o botão não está disponível */
@@ -176,25 +197,55 @@ input[type="submit"] {
     background-color:whitesmoke;
     color: red;
     padding: 5px 0; /* Ajuste na largura da mensagem para corresponder à largura do botão */
-    width: 175px; /* Defina a largura da mensagem igual à largura do botão */
+    width: 100%; /* Defina a largura da mensagem igual à largura do botão */
+    height: 100%;
     text-align: center; /* Centraliza o texto horizontalmente */
     border-radius: 5px;
     z-index: 1;
     font-size: 12px;
 }
 
+/*Estilo especial para o botão Finalizar Manutenção Seccionadora enquanto estiver desabilitado*/
+
+#finalizar-manutencao-seccionadora[disabled]:hover {
+  cursor: not-allowed; /* Muda o cursor para indicar que o botão não está disponível */
+  position: relative; 
+}
+
+#finalizar-manutencao-seccionadora[disabled]:hover::before {
+  content: "Preencha todos os campos para finalizar"; /* Adiciona o texto da mensagem */
+  position: absolute;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color:#001F3F; */
+    background-color:whitesmoke;
+    color: red;
+    padding: 5px 0; /* Ajuste na largura da mensagem para corresponder à largura do botão */
+    width: 100%; /* Defina a largura da mensagem igual à largura do botão */
+    height: 100%;    
+    text-align: center; /* Centraliza o texto horizontalmente */
+    border-radius: 5px;
+    z-index: 1;
+    font-size: 15px;   
+}
 
 /*estilo erros tela manutenção*/
 #erro-os{
-  margin-top: -20px;
+  margin-top: -18px;
   color: red;
+  font-size: 10px;
 }
-#erro-subestacao{
+#erro-subestacao,
+#erro-patrimonio-1,
+#erro-patrimonio-2{
   margin-top: 0px;
   color: red;
+  font-size: 10px;
 }
 
 #erro-selecao-equipamento{
   margin-top: -40px;
   color: red;
+  font-size: 10px;
 }

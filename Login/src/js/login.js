@@ -28,7 +28,7 @@ form_cliente.addEventListener('submit', (e)=>{
     
     if(userPassword.value.length <= 5){
       e.preventDefault();
-      pass_error_cliente.innerHTML = "Senha deve ser maior que 6 caracteres";
+      pass_error_cliente.innerHTML = "Credenciais inválidas";
     }
 
   

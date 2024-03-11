@@ -20,7 +20,7 @@ const empresas = {
 let indiceSubestacaoAtual = 0;
 
 // Dados de teste: Nome do executante logado 
-const executanteLogado = "Executante Logado";
+const executanteLogado = "Roger Abreu";
 
 // Dados de teste: Equipamento utilizado/marca modelo
 const equipamentosTeste = {
